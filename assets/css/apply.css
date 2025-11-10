@@ -1,0 +1,279 @@
+/*-----------------------------------*\
+#APPLICATION FORM STYLES
+\*-----------------------------------*/
+
+:root {
+  --deep-navy: #0a1a2f;
+  --stone: #d8d2c3;
+  --cream: #f9f6f0;
+  --gold: #c5a46d;
+}
+
+.application-form-section {
+  padding: 50px 0;
+  background-color: var(--cream);
+}
+
+.application-form {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 3px 10px rgba(10, 26, 47, 0.1);
+  color: var(--deep-navy);
+}
+
+.form-job-title {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--stone);
+}
+
+.form-job-title h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--deep-navy);
+  font-family: "Playfair Display", serif;
+}
+
+.form-job-title span {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.form-section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--stone);
+  font-family: "Playfair Display", serif;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--deep-navy);
+  margin-bottom: 8px;
+  font-family: "Lato", sans-serif;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--stone);
+  border-radius: 4px;
+  font-size: 1.5rem;
+  color: var(--deep-navy);
+  transition: border-color 0.3s;
+  background-color: var(--cream);
+  font-family: "Lato", sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--gold);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(197, 164, 109, 0.1);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.required {
+  color: var(--gold);
+}
+
+/* File upload styling */
+.file-upload {
+  margin-bottom: 20px;
+}
+
+.file-upload-container {
+  position: relative;
+  border: 2px dashed var(--stone);
+  border-radius: 15px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+  margin-bottom: 15px;
+  overflow: hidden;
+  background-color: var(--cream);
+}
+
+.file-upload-container:hover,
+.file-upload-container.highlight {
+  border-color: var(--gold);
+  background-color: rgba(197, 164, 109, 0.05);
+}
+
+.file-upload-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.file-upload-text p {
+  font-size: 1.6rem;
+  color: var(--deep-navy);
+  margin-bottom: 5px;
+  font-family: "Lato", sans-serif;
+}
+
+.file-upload-text::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/upload.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 15px;
+}
+
+.file-limit {
+  font-size: 1.3rem;
+  color: #777;
+}
+
+.file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-preview {
+  margin-top: 15px;
+}
+
+.file-preview-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: var(--stone);
+  padding: 12px 15px;
+  border-radius: 10px;
+}
+
+.file-preview-item ion-icon {
+  font-size: 2.4rem;
+  color: var(--gold);
+}
+
+.file-info {
+  flex: 1;
+}
+
+.file-name {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--deep-navy);
+  margin-bottom: 4px;
+  font-family: "Lato", sans-serif;
+}
+
+.file-size {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.remove-file {
+  background: none;
+  border: none;
+  color: #777;
+  cursor: pointer;
+  font-size: 1.8rem;
+  transition: color 0.3s;
+}
+
+.remove-file:hover {
+  color: #ff3333;
+}
+
+/* Submit button styling */
+.form-actions {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submit-btn {
+  background-color: var(--gold);
+  color: var(--deep-navy);
+  border: none;
+  border-radius: 50px;
+  padding: 12px 35px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Lato", sans-serif;
+}
+
+.submit-btn:hover {
+  background-color: var(--deep-navy);
+  color: var(--cream);
+}
+
+.submit-btn:disabled {
+  background-color: var(--stone);
+  cursor: not-allowed;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .application-form {
+    padding: 20px;
+  }
+
+  .form-job-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .form-actions {
+    justify-content: center;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}

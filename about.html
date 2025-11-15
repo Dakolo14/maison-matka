@@ -46,7 +46,10 @@
     <!--
         Custom CSS Links
         -->
-    <link rel="stylesheet" href="./assets/css/style.css " />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/agents.css" />
+    <link rel="stylesheet" href="./assets/css/testimonial.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
 
     <!--
         Preload Images
@@ -67,7 +70,7 @@
     -->
     <div class="preload" data-preaload>
       <div class="circle"></div>
-      <p class="text">Maison Matka Management</p>
+      <p class="text">Maison Matka</p>
     </div>
 
     <!--
@@ -75,20 +78,21 @@
     -->
     <div class="topbar">
       <div class="container">
-        <a href="contact.html" class="topbar-item">
+        <address class="topbar-item">
           <div class="icon">
             <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
           </div>
-          <span class="span"> Calgary & Red Deer </span>
-        </a>
+          <span class="span"> Serving Calgary & Red Deer, Alberta </span>
+        </address>
 
         <div class="topbar-item item-2"></div>
 
-        <div class="topbar-link-nav">
-          <a href="contact.html" class="topbar-item link">
-            <span class="span navbar-link"> Contact Us </span>
-          </a>
-        </div>
+        <a href="tel:+14031234567" class="topbar-item link">
+          <div class="icon">
+            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span"> +1 (403) 123-4567 </span>
+        </a>
       </div>
     </div>
 
@@ -113,24 +117,24 @@
               </a>
             </li>
             <li class="navbar-item dropdown-item">
-              <a href="about.html" class="navbar-link dropdown-toggle active">
+              <a href="#" class="navbar-link dropdown-toggle active">
                 <div class="separator"></div>
                 <div class="dropdown-link active">
                   <span class="span">About Us</span>
                   <ion-icon name="chevron-down-outline"></ion-icon>
                 </div>
-                <ul class="dropdown-menu">
-                  <li class="dropdown-subitem">
-                    <a href="about.html" class="dropdown-sublink">About</a>
-                  </li>
-                  <li class="dropdown-subitem">
-                    <a href="team.html" class="dropdown-sublink">Team</a>
-                  </li>
-                  <li class="dropdown-subitem">
-                    <a href="career.html" class="dropdown-sublink">Career</a>
-                  </li>
-                </ul>
               </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-subitem">
+                  <a href="about.html" class="dropdown-sublink">About Us</a>
+                </li>
+                <li class="dropdown-subitem">
+                  <a href="story.html" class="dropdown-sublink">Our Story</a>
+                </li>
+                <li class="dropdown-subitem">
+                  <a href="career.html" class="dropdown-sublink">Career</a>
+                </li>
+              </ul>
             </li>
             <li class="navbar-item">
               <a href="services.html" class="navbar-link hover-underline">
@@ -139,25 +143,26 @@
               </a>
             </li>
             <li class="navbar-item dropdown-item">
-              <a href="properties.html" class="navbar-link dropdown-toggle">
+              <a href="#" class="navbar-link dropdown-toggle">
                 <div class="separator"></div>
                 <div class="dropdown-link">
                   <span class="span">Properties</span>
                   <ion-icon name="chevron-down-outline"></ion-icon>
                 </div>
-                <ul class="dropdown-menu">
-                  <li class="dropdown-subitem">
-                    <a href="properties.html" class="dropdown-sublink"
-                      >Properties</a
-                    >
-                  </li>
-                  <li class="dropdown-subitem">
-                    <a href="listings.html" class="dropdown-sublink"
-                      >Listings</a
-                    >
-                  </li>
-                </ul>
               </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-subitem">
+                  <a href="investors.html" class="dropdown-sublink"
+                    >Investors</a
+                  >
+                </li>
+                <li class="dropdown-subitem">
+                  <a href="rent.html" class="dropdown-sublink">Rent</a>
+                </li>
+                <li class="dropdown-subitem">
+                  <a href="listings.html" class="dropdown-sublink">Listing</a>
+                </li>
+              </ul>
             </li>
             <li class="navbar-item">
               <a href="contact.html" class="navbar-link hover-underline">
@@ -197,10 +202,13 @@
       <div class="main-content">
         <div
           class="breadcrumbs"
-          style="background-image: url('./assets/images/about-cover.jpg')"
+          style="background-image: url('./assets/images/hero-bg.jpg')"
         >
           <div class="container content">
-            <h2>About</h2>
+            <h2>About Us</h2>
+            <p class="hero-subtitle-about">
+              A house where every journey begins
+            </p>
             <ol>
               <li><a href="index.html">Home</a></li>
               <li>About</li>
@@ -208,499 +216,238 @@
           </div>
         </div>
 
-        <section class="section about-page">
+        <!-- Brand Name Section -->
+        <section class="brand-name-section">
           <div class="container">
-            <div class="about-content" id="mission-vision">
-              <h2 class="about-vision">
-                <strong>Our Vision</strong> is to be Alberta's most trusted
-                property management company.
-              </h2>
+            <h2 class="brand-name">Maison Matka</h2>
+            <p class="brand-pronunciation">
+              [meh-ZOHN MAHT-kah] French & Finnish, noun: "House of the
+              Journey."
+            </p>
+          </div>
+        </section>
 
-              <p class="about-mission">
-                <strong>Our Mission</strong> is to deliver exceptional property
-                management services that exceed property owner expectations
-                while maintaining the highest standards of professionalism,
-                transparency, and tenant satisfaction.
-                <br />
-                <br />
-                At Maison Matka Management, we are committed to maximizing your
-                rental income through expert property management, innovative
-                marketing strategies, and dedicated customer service.
+        <!-- Our Story Section -->
+        <section class="our-story-section">
+          <div class="container">
+            <div class="story-container">
+              <div class="story-image">
+                <img
+                  src="./assets/images/story-img.jpg"
+                  alt="Maison Matka Story"
+                />
+              </div>
+              <div class="story-content">
+                <p class="story-subtitle">Pool Of Luxury</p>
+                <h2 class="story-title">About Us</h2>
+                <p class="story-text">
+                  Maison Matka is more than property management; it is a house
+                  of journeys, rooted in Slavic strength and French refinement.
+                  Maison means "house," Matka means "mother", together they
+                  embody stability, care, and belonging.
+                </p>
+                <p class="story-text">
+                  We exist to bring discipline and hospitality into perfect
+                  balance. For landlords and investors, that means rigorous
+                  systems, transparent reporting, and long-term value. For
+                  residents and guests, it means intentional spaces that feel
+                  warm, cared for, and truly welcoming.
+                </p>
+                <p class="story-text">
+                  At Maison Matka, luxury is not excess. It is trust. It is
+                  stability. It is the quiet assurance that you are looked
+                  after, whether you own the home or call it your own for a
+                  while.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Poem Section -->
+        <section class="poem-section">
+          <div class="container">
+            <div class="poem-content">
+              <h2 class="poem-title">About Us, Maison Matka</h2>
+
+              <div class="poem-stanza">
+                <p>A house of journeys,</p>
+                <p>Built on strength and care.</p>
+                <p>Where journeys once felt uncertain,</p>
+                <p>Now they find a resting place</p>
+              </div>
+
+              <div class="poem-stanza">
+                <p>Born of discipline,</p>
+                <p>Shaped by hospitality,</p>
+                <p>It holds both story and structure:</p>
+                <p>For the one who owns,</p>
+                <p>For the one who dwells,</p>
+                <p>For the one who dreams of home.</p>
+              </div>
+
+              <div class="poem-stanza">
+                <p>Here, luxury is not spectacle</p>
+                <p>It is trust,</p>
+                <p>It is stability,</p>
+                <p>It is the quiet assurance</p>
+                <p>That you are looked after.</p>
+              </div>
+
+              <div class="poem-signature">
+                <p>Maison Matka</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Firepower Section -->
+        <section class="firepower-section">
+          <!-- Mission Card -->
+          <div class="firepower-card">
+            <div class="firepower-image">
+              <img
+                src="./assets/images/first.jpg"
+                alt="Mission - Property Management"
+              />
+            </div>
+            <div class="firepower-content">
+              <h3 class="firepower-label">Mission</h3>
+              <h2 class="firepower-title">About Us, Red Deer</h2>
+              <p class="firepower-text">
+                To deliver world-class property management that creates lasting
+                value for landlords and investors, while ensuring guests and
+                residents feel genuinely cared for.
               </p>
             </div>
+          </div>
 
-            <div class="core-values">
-              <div class="core-title">
-                <h2 class="core-heading text-center">Our Core Values</h2>
-                <p class="core-subheading text-center">
-                  Our values guide every property we manage and every
-                  relationship we build. These principles are the foundation of
-                  our commitment to excellence in property management.
-                </p>
-              </div>
-              <div class="value-container">
-                <div class="value-box">
-                  <div class="value-icon">
-                    <img
-                      src="./assets/images/integrity.svg"
-                      alt="Integrity Icon"
-                    />
-                  </div>
-                  <div class="value-header text-center">Integrity</div>
-                  <div class="value-text text-center">
-                    We conduct business with honesty, transparency, and
-                    accountability in all our dealings with property owners and
-                    tenants.
-                  </div>
-                </div>
-
-                <div class="value-box">
-                  <div class="value-icon">
-                    <img
-                      src="./assets/images/love-hand.svg"
-                      alt="Excellence Icon"
-                    />
-                  </div>
-                  <div class="value-header text-center">Excellence</div>
-                  <div class="value-text text-center">
-                    We are committed to delivering superior service in every
-                    aspect of property management, ensuring maximum value for
-                    our clients.
-                  </div>
-                </div>
-
-                <div class="value-box">
-                  <div class="value-icon">
-                    <img
-                      src="./assets/images/passion.svg"
-                      alt="Innovation Icon"
-                    />
-                  </div>
-                  <div class="value-header text-center">Innovation</div>
-                  <div class="value-text text-center">
-                    We embrace new technologies and best practices to optimize
-                    property performance and streamline management processes.
-                  </div>
-                </div>
-
-                <div class="value-box">
-                  <div class="value-icon">
-                    <img
-                      src="./assets/images/hardwork.svg"
-                      alt="Responsiveness Icon"
-                    />
-                  </div>
-                  <div class="value-header text-center">Responsiveness</div>
-                  <div class="value-text text-center">
-                    We provide 24/7 support and quick response times to address
-                    any property management needs or emergencies.
-                  </div>
-                </div>
-
-                <div class="value-box">
-                  <div class="value-icon">
-                    <img
-                      src="./assets/images/sacrifice.svg"
-                      alt="Communication Icon"
-                    />
-                  </div>
-                  <div class="value-header text-center">Communication</div>
-                  <div class="value-text text-center">
-                    We believe in clear, consistent communication with property
-                    owners and tenants to build trust and ensure satisfaction.
-                  </div>
-                </div>
-
-                <div class="value-box">
-                  <div class="value-icon">
-                    <img
-                      src="./assets/images/evolution.svg"
-                      alt="Growth Icon"
-                    />
-                  </div>
-                  <div class="value-header text-center">Growth Focus</div>
-                  <div class="value-text text-center">
-                    We are dedicated to helping property investors grow their
-                    portfolios and maximize returns on investment.
-                  </div>
-                </div>
-              </div>
+          <!-- Vision Card -->
+          <div class="firepower-card reverse">
+            <div class="firepower-image">
+              <img
+                src="./assets/images/second.jpg"
+                alt="Vision - Property Management"
+              />
             </div>
-
-            <div class="konga-glance">
-              <div class="glance-header">
-                <h2 class="glance-heading text-center">
-                  Maison Matka at a Glance
-                </h2>
-                <p class="glance-subheading text-center">
-                  Key facts and figures about our property management services,
-                  showcasing our expertise and commitment to excellence in the
-                  Alberta rental market.
-                  <br /><br />
-                  <strong>As at January 2025</strong>
-                </p>
-              </div>
-              <div class="glance-stats">
-                <div class="stats-box">
-                  <div class="stats-heading">
-                    <div class="stats-number">500+</div>
-                    <div class="stats-text">
-                      Properties <br />
-                      Under Management
-                    </div>
-                  </div>
-                  <div class="stats-icon">
-                    <img
-                      src="./assets/images/business-building.svg"
-                      alt="Properties Icon"
-                    />
-                  </div>
-                </div>
-
-                <div class="stats-box">
-                  <div class="stats-heading">
-                    <div class="stats-number">95%</div>
-                    <div class="stats-text">Client Satisfaction Rate</div>
-                  </div>
-                  <div class="stats-icon">
-                    <img
-                      src="./assets/images/sell.svg"
-                      alt="Satisfaction Icon"
-                    />
-                  </div>
-                </div>
-
-                <div class="stats-box">
-                  <div class="stats-heading">
-                    <div class="stats-number">24/7</div>
-                    <div class="stats-text">Emergency Support</div>
-                  </div>
-                  <div class="stats-icon">
-                    <img
-                      src="./assets/images/web-browser.svg"
-                      alt="Support Icon"
-                    />
-                  </div>
-                </div>
-
-                <div class="stats-box">
-                  <div class="stats-heading">
-                    <div class="stats-number">50+</div>
-                    <div class="stats-text">
-                      Property Management <br />
-                      Professionals
-                    </div>
-                  </div>
-                  <div class="stats-icon">
-                    <img src="./assets/images/employees.svg" alt="Team Icon" />
-                  </div>
-                </div>
-
-                <div class="stats-box">
-                  <div class="stats-heading">
-                    <div class="stats-number">2</div>
-                    <div class="stats-text">
-                      Major Service <br />
-                      Areas in Alberta
-                    </div>
-                  </div>
-                  <div class="stats-icon">
-                    <img
-                      src="./assets/images/store-location.png"
-                      alt="Location Icon"
-                    />
-                  </div>
-                </div>
-
-                <div class="stats-box">
-                  <div class="stats-heading">
-                    <div class="stats-number">98%</div>
-                    <div class="stats-text">Average Occupancy Rate</div>
-                  </div>
-                  <div class="stats-icon">
-                    <img
-                      src="./assets/images/package.svg"
-                      alt="Occupancy Icon"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="glance-text">
-                <div class="text-box">
-                  <img src="./assets/images/plus.svg" alt="Plus Icon" />
-                  <p>
-                    Leading property management company in Calgary and Red Deer
-                  </p>
-                </div>
-
-                <div class="text-box">
-                  <img src="./assets/images/plus.svg" alt="Plus Icon" />
-                  <p>
-                    Specialized in both short-term Airbnb and long-term rental
-                    management
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="strategy">
-              <div class="strategy-title">
-                <h2 class="strategy-heading text-center">Our Approach</h2>
-                <p class="strategy-subheading text-center">
-                  We follow a strategic approach to property management that
-                  maximizes rental income while maintaining property value.
-                  <br />
-                  <br />
-                  Our methodology is built on
-                  <strong>four key pillars</strong> that ensure success for
-                  property owners.
-                </p>
-              </div>
-              <div class="strategy-container">
-                <div class="strategy-box">
-                  <div class="strategy-icon">
-                    <img
-                      src="./assets/images/world-strategy.svg"
-                      alt="Marketing Icon"
-                    />
-                  </div>
-                  <div class="strategy-text text-center">
-                    Strategic Marketing & Tenant Placement
-                  </div>
-                </div>
-
-                <div class="strategy-box">
-                  <div class="strategy-icon">
-                    <img
-                      src="./assets/images/package-strategy.svg"
-                      alt="Management Icon"
-                    />
-                  </div>
-                  <div class="strategy-text text-center">
-                    Professional Property Maintenance & Care
-                  </div>
-                </div>
-
-                <div class="strategy-box">
-                  <div class="strategy-icon">
-                    <img
-                      src="./assets/images/bridge-strategy.svg"
-                      alt="Financial Icon"
-                    />
-                  </div>
-                  <div class="strategy-text text-center">
-                    Transparent Financial Reporting
-                  </div>
-                </div>
-
-                <div class="strategy-box">
-                  <div class="strategy-icon">
-                    <img
-                      src="./assets/images/growth-strategy.svg"
-                      alt="Support Icon"
-                    />
-                  </div>
-                  <div class="strategy-text text-center">
-                    Dedicated Owner & Tenant Support
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="history">
-              <div class="history-content">
-                <h2>Our Story</h2>
-                <p>
-                  Maison Matka Management was founded with a vision to
-                  revolutionize property management in Alberta.
-                </p>
-                <p>
-                  We have grown to become one of the most trusted property
-                  management companies in Calgary and Red Deer, managing
-                  hundreds of properties and building lasting relationships with
-                  property owners and tenants alike.
-                </p>
-                <a href="properties.html" class="btn btn-secondary">
-                  <span class="text text-1">View Properties</span>
-                  <span class="text text-2" aria-hidden="true"
-                    >View Properties</span
-                  >
-                </a>
-              </div>
-            </div>
-
-            <div class="about-text-story">
-              <h2 style="color: #252525; font-weight: 600; margin-bottom: 20px">
-                Why Choose Maison Matka Management?
-              </h2>
-              <p style="margin-bottom: 15px">
-                As Calgary's premier property management company, Maison Matka
-                Management has established itself as a trusted partner for
-                property investors. We pride ourselves on:
+            <div class="firepower-content">
+              <h3 class="firepower-label">Vision</h3>
+              <h2 class="firepower-title">About Us, Red Deer</h2>
+              <p class="firepower-text">
+                To redefine property management in Alberta and beyond. Elevating
+                real estate into curated living experiences that balance
+                investor performance with human connection.
               </p>
-              <ul
-                style="
-                  list-style: disc;
-                  padding-left: 30px;
-                  margin-bottom: 20px;
-                "
-              >
-                <li style="margin-bottom: 10px">
-                  Maximizing rental income through strategic pricing and
-                  marketing
-                </li>
-                <li style="margin-bottom: 10px">
-                  Maintaining high occupancy rates year-round
-                </li>
-                <li style="margin-bottom: 10px">
-                  Providing comprehensive property maintenance and care
-                </li>
-                <li style="margin-bottom: 10px">
-                  Offering 24/7 emergency support for property owners and
-                  tenants
-                </li>
-                <li style="margin-bottom: 10px">
-                  Delivering transparent financial reporting and communication
-                </li>
-              </ul>
-              <p>
-                Whether you need short-term Airbnb management or long-term
-                rental services, Maison Matka Management is your partner for
-                success. Let us help you maximize your property investment.
+            </div>
+          </div>
+
+          <!-- Values Card -->
+          <div class="firepower-card">
+            <div class="firepower-image">
+              <img
+                src="./assets/images/third.jpg"
+                alt="Values - Property Management"
+              />
+            </div>
+            <div class="firepower-content">
+              <h3 class="firepower-label">Values</h3>
+              <h2 class="firepower-title">About Us, Red Deer</h2>
+              <p class="firepower-text">
+                Our latest fragrance is inspired by the sense of awe and
+                possibility felt when looking up at a star-strewn sky.
               </p>
             </div>
           </div>
         </section>
 
-        <div class="cookie-popup" id="cookiePopup" style="display: none">
-          <p>
-            We use cookies to enhance your browsing experience and analyze site
-            traffic. By continuing to use this website, you consent to our use
-            of cookies.
-            <span
-              ><a href="#" style="color: var(--gold-crayola)"
-                >Learn More</a
-              ></span
-            >
-          </p>
-          <div class="cookie-actions">
-            <button id="acceptCookies">Accept</button>
-            <button id="rejectCookies">Decline</button>
-          </div>
-        </div>
-
-        <footer class="section footer text-center">
+        <!-- Tagline Name Section -->
+        <section class="tagline-name-section">
           <div class="container">
-            <div class="footer-top grid-list">
+            <h2 class="tagline-name">
+              “Where life begins, where homes thrive”
+            </h2>
+          </div>
+        </section>
+
+        <section class="cta"></section>
+
+        <footer class="footer">
+          <div class="container">
+            <div class="footer-top">
               <div class="footer-brand">
-                <h3>Quick Links</h3>
+                <h3>Title</h3>
                 <ul class="footer-list">
-                  <li>
-                    <a
-                      href="index.html"
-                      class="label-2 footer-link hover-underline"
-                      >Home</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="about.html"
-                      class="label-2 footer-link hover-underline"
-                      >About Us</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="services.html"
-                      class="label-2 footer-link hover-underline"
-                      >Services</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="properties.html"
-                      class="label-2 footer-link hover-underline"
-                      >Properties</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="contact.html"
-                      class="label-2 footer-link hover-underline"
-                      >Contact</a
-                    >
-                  </li>
+                  <li><a href="#" class="footer-link">Link 1</a></li>
+                  <li><a href="#" class="footer-link">Link 2</a></li>
+                  <li><a href="#" class="footer-link">Link 3</a></li>
+                  <li><a href="#" class="footer-link">Link 4</a></li>
+                  <li><a href="#" class="footer-link">Link 5</a></li>
+                  <li><a href="#" class="footer-link">Link 6</a></li>
                 </ul>
               </div>
+
               <div class="footer-brand">
-                <h3>Our Services</h3>
+                <h3>Title</h3>
                 <ul class="footer-list">
-                  <li>
-                    <a
-                      href="services.html"
-                      class="label-2 footer-link hover-underline"
-                      >Short-Term Rentals</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="services.html"
-                      class="label-2 footer-link hover-underline"
-                      >Long-Term Rentals</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="services.html"
-                      class="label-2 footer-link hover-underline"
-                      >Investor Support</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="services.html"
-                      class="label-2 footer-link hover-underline"
-                      >Airbnb Management</a
-                    >
-                  </li>
+                  <li><a href="#" class="footer-link">Link 1</a></li>
+                  <li><a href="#" class="footer-link">Link 2</a></li>
+                  <li><a href="#" class="footer-link">Link 3</a></li>
+                  <li><a href="#" class="footer-link">Link 4</a></li>
+                  <li><a href="#" class="footer-link">Link 5</a></li>
+                  <li><a href="#" class="footer-link">Link 6</a></li>
                 </ul>
               </div>
+
               <div class="footer-brand">
-                <h3>Contact Info</h3>
+                <h3>Title</h3>
                 <ul class="footer-list">
-                  <li>
-                    <a
-                      href="tel:+14031234567"
-                      class="label-2 footer-link hover-underline"
-                      >+1 (403) 123-4567</a
-                    >
-                  </li>
-                  <li>
-                    <p class="label-2" style="color: #e0e0e0">
-                      Calgary & Red Deer, Alberta, Canada
-                    </p>
-                  </li>
+                  <li><a href="#" class="footer-link">Link 1</a></li>
+                  <li><a href="#" class="footer-link">Link 2</a></li>
+                  <li><a href="#" class="footer-link">Link 3</a></li>
+                  <li><a href="#" class="footer-link">Link 4</a></li>
+                  <li><a href="#" class="footer-link">Link 5</a></li>
+                  <li><a href="#" class="footer-link">Link 6</a></li>
+                </ul>
+              </div>
+
+              <div class="footer-brand">
+                <h3>Title</h3>
+                <ul class="footer-list">
+                  <li><a href="#" class="footer-link">Link 1</a></li>
+                  <li><a href="#" class="footer-link">Link 2</a></li>
+                  <li><a href="#" class="footer-link">Link 3</a></li>
+                  <li><a href="#" class="footer-link">Link 4</a></li>
+                  <li><a href="#" class="footer-link">Link 5</a></li>
+                  <li><a href="#" class="footer-link">Link 6</a></li>
                 </ul>
               </div>
             </div>
-
-            <div class="footer-separator"></div>
 
             <div class="footer-bottom">
-              <p class="copyright">
-                &copy; 2025 Maison Matka Management. All Rights Reserved |
-                Crafted by Olukolade Daramola
-              </p>
-            </div>
+              <div class="footer-logo">
+                <h2 class="footer-logo-text">LOGO</h2>
+              </div>
 
-            <a
-              href="#top"
-              class="back-top-btn active"
-              aria-label="back to top"
-              data-back-top-btn
-            >
-              <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
-            </a>
+              <p class="copyright">CompanyName @ 202X. All rights reserved.</p>
+
+              <div class="social-links">
+                <a href="#" class="social-link" aria-label="YouTube">
+                  <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+                <a href="#" class="social-link" aria-label="Facebook">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="#" class="social-link" aria-label="Twitter">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+                <a href="#" class="social-link" aria-label="Instagram">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </div>
+            </div>
           </div>
         </footer>
       </div>

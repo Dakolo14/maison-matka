@@ -1426,19 +1426,22 @@ body.nav-active {
 
 /* Breadcrumbs container */
 .breadcrumbs {
-  padding: 140px 0 60px 0;
-  min-height: 35vh;
+  padding: 180px 0 80px 0;
+  min-height: 50vh;
   position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Breadcrumbs overlay */
 .breadcrumbs:before {
   content: "";
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
   inset: 0;
   z-index: -1;
@@ -1449,14 +1452,27 @@ body.nav-active {
   flex-direction: column;
   align-items: center;
   z-index: 1;
+  text-align: center;
 }
 
 /* Breadcrumbs title */
 .breadcrumbs h2 {
-  font-size: 56px;
+  font-size: 6rem;
   font-weight: 500;
   color: var(--cream);
   font-family: var(--fontFamily-playfair);
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+/* Hero subtitle for about page */
+.hero-subtitle-about {
+  font-size: 2rem;
+  color: var(--gold);
+  font-family: var(--fontFamily-playfair);
+  font-style: italic;
+  margin-bottom: 25px;
+  font-weight: 400;
 }
 
 /* Breadcrumbs list */
@@ -1494,6 +1510,545 @@ body.nav-active {
   padding-right: 10px;
   color: #fff;
   content: "/";
+}
+
+/* Breadcrumbs responsive */
+@media (max-width: 767px) {
+  .breadcrumbs {
+    padding: 140px 0 60px 0;
+    min-height: 40vh;
+  }
+
+  .breadcrumbs h2 {
+    font-size: 3.5rem;
+  }
+
+  .hero-subtitle-about {
+    font-size: 1.6rem;
+  }
+}
+
+/*-----------------------------------*\
+  #BRAND NAME SECTION
+\*-----------------------------------*/
+
+.brand-name-section {
+  background-color: var(--stone);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.tagline-name-section {
+  background-color: var(--deep-navy);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.brand-name-section .container,
+.tagline-name-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.brand-name {
+  font-family: var(--fontFamily-playfair);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 600;
+  color: var(--deep-navy);
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.tagline-name {
+  font-family: var(--fontFamily-playfair);
+  font-size: clamp(1rem, 4vw, 5rem);
+  font-weight: 400;
+  color: var(--cream);
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.brand-pronunciation {
+  font-family: var(--fontFamily-lato);
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  color: var(--deep-navy);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Responsive for brand name section */
+@media (max-width: 767px) {
+  .brand-name-section {
+    padding: 60px 20px;
+  }
+
+  .brand-name {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+  }
+
+  .brand-pronunciation {
+    font-size: 1.5rem;
+  }
+}
+
+/*-----------------------------------*\
+  #OUR STORY SECTION
+\*-----------------------------------*/
+
+.our-story-section {
+  background-color: #fff;
+  padding: 0;
+}
+
+.our-story-section .container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.story-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: stretch;
+  min-height: 700px;
+}
+
+.story-image {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.story-content {
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.story-subtitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: var(--fontFamily-lato);
+  margin-bottom: 15px;
+}
+
+.story-title {
+  font-size: clamp(4rem, 6vw, 6rem);
+  font-weight: 400;
+  color: var(--cream);
+  font-family: var(--fontFamily-playfair);
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.story-text {
+  font-size: 1.7rem;
+  color: var(--cream);
+  font-family: var(--fontFamily-lato);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.story-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Dark background for story content */
+.story-container {
+  background-color: var(--deep-navy);
+}
+
+.story-image {
+  background-color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .story-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+    min-height: auto;
+  }
+
+  .story-image {
+    min-height: 400px;
+  }
+
+  .story-content {
+    padding: 50px 40px;
+  }
+
+  .story-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .story-title {
+    font-size: 4rem;
+    margin-bottom: 25px;
+  }
+
+  .story-text {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .story-image {
+    min-height: 350px;
+  }
+
+  .story-content {
+    padding: 40px 25px;
+  }
+
+  .story-subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+
+  .story-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+  }
+
+  .story-text {
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .story-container {
+    min-height: 800px;
+  }
+
+  .story-content {
+    padding: 100px 80px;
+    max-width: 700px;
+  }
+
+  .story-subtitle {
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+  }
+
+  .story-title {
+    font-size: 6.5rem;
+  }
+
+  .story-text {
+    font-size: 1.8rem;
+  }
+}
+
+/*-----------------------------------*\
+  #POEM SECTION
+\*-----------------------------------*/
+
+.poem-section {
+  background-color: var(--white);
+  padding: 120px 20px;
+}
+
+.poem-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.poem-content {
+  text-align: center;
+}
+
+.poem-title {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 400;
+  color: var(--deep-navy);
+  font-family: var(--fontFamily-playfair);
+  margin-bottom: 60px;
+  line-height: 1.3;
+}
+
+.poem-stanza {
+  margin-bottom: 40px;
+}
+
+.poem-stanza p {
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  color: var(--deep-navy);
+  font-family: var(--fontFamily-playfair);
+  line-height: 1.8;
+  margin-bottom: 8px;
+  font-style: normal;
+}
+
+.poem-stanza:last-of-type {
+  margin-bottom: 50px;
+}
+
+.poem-signature {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid var(--stone);
+}
+
+.poem-signature p {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  color: var(--gold);
+  font-family: var(--fontFamily-playfair);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .poem-section {
+    padding: 80px 20px;
+  }
+
+  .poem-title {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+  }
+
+  .poem-stanza {
+    margin-bottom: 30px;
+  }
+
+  .poem-stanza p {
+    font-size: 1.7rem;
+    line-height: 1.7;
+    margin-bottom: 6px;
+  }
+
+  .poem-signature {
+    margin-top: 40px;
+    padding-top: 30px;
+  }
+
+  .poem-signature p {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .poem-section {
+    padding: 150px 40px;
+  }
+
+  .poem-section .container {
+    max-width: 1000px;
+  }
+
+  .poem-title {
+    font-size: 5rem;
+    margin-bottom: 80px;
+  }
+
+  .poem-stanza {
+    margin-bottom: 50px;
+  }
+
+  .poem-stanza p {
+    font-size: 2.4rem;
+    line-height: 2;
+    margin-bottom: 10px;
+  }
+
+  .poem-signature {
+    margin-top: 70px;
+    padding-top: 50px;
+  }
+
+  .poem-signature p {
+    font-size: 3rem;
+  }
+}
+
+/*-----------------------------------*\
+  #FIREPOWER SECTION
+\*-----------------------------------*/
+
+.firepower-section {
+  background-color: var(--cream);
+  padding: 0;
+  width: 100%;
+}
+
+.firepower-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+  position: relative;
+  width: 100%;
+}
+
+.firepower-card.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.firepower-card.reverse .firepower-image {
+  order: 2;
+}
+
+.firepower-card.reverse .firepower-content {
+  order: 1;
+}
+
+.firepower-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.firepower-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.firepower-content {
+  background-color: var(--cream);
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.firepower-label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--deep-navy);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: var(--fontFamily-lato);
+  margin-bottom: 15px;
+}
+
+.firepower-title {
+  font-size: clamp(3.5rem, 5vw, 5rem);
+  font-weight: 400;
+  color: var(--deep-navy);
+  font-family: var(--fontFamily-playfair);
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.firepower-text {
+  font-size: 1.7rem;
+  color: var(--deep-navy);
+  font-family: var(--fontFamily-lato);
+  line-height: 1.8;
+  max-width: 500px;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .firepower-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .firepower-card.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .firepower-card.reverse .firepower-image {
+    order: 1;
+  }
+
+  .firepower-card.reverse .firepower-content {
+    order: 2;
+  }
+
+  .firepower-image {
+    min-height: 400px;
+  }
+
+  .firepower-content {
+    padding: 50px 40px;
+  }
+
+  .firepower-label {
+    font-size: 1.3rem;
+  }
+
+  .firepower-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+  }
+
+  .firepower-text {
+    font-size: 1.6rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .firepower-image {
+    min-height: 350px;
+  }
+
+  .firepower-content {
+    padding: 40px 25px;
+  }
+
+  .firepower-label {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+
+  .firepower-title {
+    font-size: 3rem;
+    margin-bottom: 18px;
+  }
+
+  .firepower-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .firepower-card {
+    min-height: 700px;
+  }
+
+  .firepower-content {
+    padding: 100px 80px;
+  }
+
+  .firepower-label {
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+  }
+
+  .firepower-title {
+    font-size: 5.5rem;
+  }
+
+  .firepower-text {
+    font-size: 1.8rem;
+    max-width: 550px;
+  }
 }
 
 /*-----------------------------------*\

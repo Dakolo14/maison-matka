@@ -167,3 +167,34 @@ window.addEventListener("mousemove", function (event) {
     parallaxItems[i].style.transform = `translate3d(${x}px, ${y}px, 0px)`;
   }
 });
+
+// Render Lucide Icons
+lucide.createIcons();
+
+// FAQ Accordion Logic
+document.addEventListener("DOMContentLoaded", () => {
+  const faqItems = document.querySelectorAll(".faq-custom-scope__item");
+
+  faqItems.forEach((item) => {
+    const header = item.querySelector(".faq-custom-scope__header");
+    const content = item.querySelector(".faq-custom-scope__content");
+
+    header.addEventListener("click", () => {
+      // Toggle 'active' class on the clicked item
+      const isOpen = item.classList.contains("active");
+
+      // Close others (Accordion style)
+      faqItems.forEach((otherItem) => {
+        otherItem.classList.remove("active");
+        otherItem.querySelector(".faq-custom-scope__content").style.maxHeight =
+          null;
+      });
+
+      if (!isOpen) {
+        item.classList.add("active");
+        // Set max-height to scrollHeight to animate opening
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  });
+});

@@ -1579,6 +1579,30 @@ body.nav-active {
   margin: 0 auto;
 }
 
+.services-headline {
+  font-family: var(--fontFamily-playfair);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 500;
+  color: var(--deep-navy);
+  margin: 0;
+  letter-spacing: 1px;
+  line-height: 1.3;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.investors-headline {
+  font-family: var(--fontFamily-playfair);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 500;
+  color: var(--deep-navy);
+  margin: 0;
+  letter-spacing: 1px;
+  line-height: 1.3;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 /* Responsive for brand name section */
 @media (max-width: 767px) {
   .brand-name-section {
@@ -1592,6 +1616,200 @@ body.nav-active {
 
   .brand-pronunciation {
     font-size: 1.5rem;
+  }
+
+  .services-headline {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .services-headline {
+    font-size: 5rem;
+  }
+}
+
+/*-----------------------------------*\
+  #SERVICES GRID SECTION
+\*-----------------------------------*/
+
+.services-grid-section {
+  background-color: var(--cream);
+  padding: 100px 20px;
+}
+
+.services-grid-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-image-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  background-color: var(--deep-navy);
+  min-height: 400px;
+  transition: transform 0.3s ease;
+}
+
+.service-image-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.service-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.service-image-card:hover .service-bg-image {
+  transform: scale(1.05);
+}
+
+.service-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 26, 47, 0.95) 0%,
+    rgba(10, 26, 47, 0.8) 50%,
+    transparent 100%
+  );
+  padding: 40px 30px 30px;
+  transition: all 0.4s ease;
+}
+
+.service-card-title {
+  font-family: var(--fontFamily-playfair);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 12px;
+  line-height: 1.3;
+  transition: transform 0.3s ease;
+}
+
+.service-card-text {
+  font-family: var(--fontFamily-lato);
+  font-size: 1.5rem;
+  color: var(--stone);
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  margin: 0;
+}
+
+.service-image-card:hover .service-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(10, 26, 47, 1) 0%,
+    rgba(10, 26, 47, 0.95) 70%,
+    rgba(10, 26, 47, 0.3) 100%
+  );
+  padding: 50px 30px 40px;
+}
+
+.service-image-card:hover .service-card-title {
+  transform: translateY(-5px);
+}
+
+.service-image-card:hover .service-card-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .services-grid-section {
+    padding: 60px 20px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-image-card {
+    min-height: 350px;
+  }
+
+  .service-image-wrapper {
+    min-height: 350px;
+  }
+
+  .service-overlay {
+    padding: 30px 20px 25px;
+  }
+
+  .service-card-title {
+    font-size: 2rem;
+  }
+
+  .service-card-text {
+    font-size: 1.4rem;
+  }
+
+  .service-image-card:hover .service-overlay {
+    padding: 40px 20px 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .service-image-card {
+    min-height: 380px;
+  }
+}
+
+@media (min-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  .service-image-card {
+    min-height: 450px;
+  }
+
+  .service-image-wrapper {
+    min-height: 450px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .services-grid-section {
+    padding: 120px 40px;
+  }
+
+  .service-card-title {
+    font-size: 2.6rem;
+  }
+
+  .service-card-text {
+    font-size: 1.6rem;
   }
 }
 
@@ -3002,14 +3220,6 @@ body.nav-active {
   border-bottom: 2px solid var(--gold);
 }
 
-.service-card-title {
-  font-size: 2.8rem;
-  font-weight: 600;
-  color: var(--deep-navy);
-  font-family: var(--fontFamily-playfair);
-  margin-bottom: 10px;
-}
-
 .service-card-subtitle {
   font-size: 1.4rem;
   color: var(--gold);
@@ -3129,6 +3339,10 @@ body.nav-active {
   text-align: center;
   margin-bottom: 60px;
   position: relative;
+}
+
+.investor-page .property-header::before {
+  display: none;
 }
 
 .property-header::before {
@@ -3550,4 +3764,709 @@ body.nav-active {
     font-size: 1.4rem;
     letter-spacing: 5px;
   }
+}
+
+.service-card-section {
+  background-color: var(--cream);
+  padding-block: 100px;
+}
+
+.container .service-card-section {
+  max-width: 1200px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.service-card-section .card-animate {
+  height: 300px;
+  width: 100%;
+  background-color: var(--stone);
+}
+
+/* =========================================
+           COPY THIS SECTION INTO deals.css
+           ========================================= */
+
+/* Scoped Wrapper - Prevents conflicts with global styles */
+.deals-section-wrapper {
+  background-color: #051122; /* Deep Navy Blue */
+  color: #ffffff;
+  font-family: "Lato", sans-serif; /* Fallback font */
+  padding: 80px 20px 0 20px; /* Top padding, side padding */
+  position: relative;
+  box-sizing: border-box;
+  /* Flex column to organize header and cards */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Max-width container for content centering */
+.deals-section-wrapper__container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Top Header Area (Flexbox) */
+.deals-section-wrapper__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 60px; /* Space between text and cards */
+}
+
+/* Left Side Headline */
+.deals-section-wrapper__headline {
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  line-height: 1.5;
+  font-weight: 700;
+  flex: 1; /* Takes up available space */
+  margin: 0;
+  color: #ffffff;
+}
+
+/* Right Side Content */
+.deals-section-wrapper__content-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding-top: 10px; /* Slight alignment adjustment with large headline */
+}
+
+/* Descriptive Paragraph */
+.deals-section-wrapper__text {
+  font-family: "Lato", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin: 0;
+  color: #e0e0e0; /* Slightly off-white for readability */
+}
+
+/* CTA Button */
+.deals-section-wrapper__button {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #051122;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px 32px;
+  border-radius: 50px; /* Pill shape */
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.deals-section-wrapper__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Cards Container */
+.deals-section-wrapper__cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+  /* THE OVERLAP MAGIC */
+  margin-bottom: -150px; /* Pulls the bottom margin up so cards hang off */
+  position: relative;
+  z-index: 10; /* Ensures cards sit on top of the next section */
+}
+
+/* Individual Card */
+.deals-section-wrapper__card {
+  background-color: #c0a676; /* Muted Gold/Tan Fallback */
+  border-radius: 16px;
+  height: 400px; /* Fixed height */
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+
+  /* Image Handling */
+  background-size: cover;
+  background-position: center;
+  position: relative; /* Needed for overlay positioning */
+  overflow: hidden; /* Ensures overlay stays within rounded corners */
+  cursor: pointer;
+}
+
+/* Placeholder image URL - Replace with your specific images */
+.deals-section-wrapper__card:nth-child(1) {
+  background-image: url("http://googleusercontent.com/image_generation_content/0");
+}
+.deals-section-wrapper__card:nth-child(2) {
+  background-image: url("http://googleusercontent.com/image_generation_content/0");
+}
+.deals-section-wrapper__card:nth-child(3) {
+  background-image: url("http://googleusercontent.com/image_generation_content/0");
+}
+
+.deals-section-wrapper__card:hover {
+  transform: translateY(-5px);
+}
+
+/* HOVER OVERLAY */
+.deals-section-wrapper__card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Deep Navy Blue with 95% opacity */
+  background-color: rgba(5, 17, 34, 0.95);
+
+  /* Hidden by default */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+
+  /* Flex center content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Show overlay on hover */
+.deals-section-wrapper__card:hover .deals-section-wrapper__card-overlay {
+  opacity: 1;
+}
+
+/* Overlay Text Styling */
+.deals-section-wrapper__card-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.75rem;
+  color: #c0a676; /* Gold/Tan text to match theme */
+  margin-bottom: 16px;
+  transform: translateY(20px); /* Slide up effect */
+  transition: transform 0.4s ease;
+}
+
+.deals-section-wrapper__card-desc {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.5;
+  transform: translateY(20px); /* Slide up effect */
+  transition: transform 0.4s ease 0.1s; /* Slight delay */
+}
+
+/* Animate text slide up on hover */
+.deals-section-wrapper__card:hover .deals-section-wrapper__card-title,
+.deals-section-wrapper__card:hover .deals-section-wrapper__card-desc {
+  transform: translateY(0);
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 960px) {
+  .deals-section-wrapper__header {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .deals-section-wrapper__headline {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .deals-section-wrapper {
+    padding-bottom: 40px; /* Reset padding on mobile */
+  }
+
+  .deals-section-wrapper__cards-container {
+    grid-template-columns: 1fr; /* Stack cards vertically */
+    margin-bottom: 0; /* Remove overlap on mobile for cleaner layout */
+    gap: 20px;
+  }
+
+  .deals-section-wrapper__card {
+    height: 300px; /* Slightly shorter on mobile */
+  }
+
+  .deals-section-wrapper__header {
+    text-align: center;
+    align-items: center;
+  }
+
+  .deals-section-wrapper__content-right {
+    align-items: center;
+  }
+}
+
+/* =========================================
+           END OF deals.css
+           ========================================= */
+
+/* styles below are just for this preview to simulate 
+           the "White Section" that follows your blue section 
+        */
+body {
+  margin: 0;
+  padding: 0;
+}
+.next-section-simulation {
+  background-color: #ffffff;
+  height: 600px;
+  padding-top: 200px; /* Space to accommodate the hanging cards */
+  text-align: center;
+  color: #333;
+  font-family: "Lato", sans-serif;
+}
+
+/* =========================================
+           FAQ SECTION STYLES
+           ========================================= */
+
+/* Scoped Wrapper for FAQ */
+.faq-custom-scope {
+  background-color: var(--white);
+  width: 100%;
+  padding-top: 220px;
+  padding-bottom: 120px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  margin-block: 100px;
+}
+
+.faq-custom-scope__container {
+  max-width: 1200px; /* Slightly wider for better readability */
+  margin: 0 auto;
+}
+
+.faq-custom-scope__headline {
+  font-family: "Playfair Display", serif;
+  font-size: 4rem; /* Increased size */
+  color: #051122;
+  text-align: center;
+  margin-bottom: 80px; /* More space below headline */
+  font-weight: 700;
+}
+
+/* Accordion Item Styling */
+.faq-custom-scope__item {
+  background-color: #f2ebdc;
+  border-radius: 16px; /* Slightly rounder */
+  margin-bottom: 24px; /* More space between items */
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Header (The clickable part) */
+.faq-custom-scope__header {
+  padding: 32px 40px; /* BIGGER CLICK AREA */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.faq-custom-scope__question {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem; /* Increased from 1.25rem */
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Icon Rotation Logic */
+.faq-custom-scope__icon {
+  color: #1a1a1a;
+  transition: transform 0.3s ease;
+  width: 28px; /* Slightly larger icon */
+  height: 28px;
+  flex-shrink: 0; /* Prevents icon from squishing on small screens */
+  margin-left: 24px;
+}
+
+/* Class added by JS when open */
+.faq-custom-scope__item.active .faq-custom-scope__icon {
+  transform: rotate(180deg);
+}
+
+/* Content (Hidden part) */
+.faq-custom-scope__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1); /* Slower, smoother ease */
+  background-color: #f2ebdc;
+}
+
+.faq-custom-scope__answer {
+  padding: 0 40px 40px 40px; /* More breathing room */
+  margin: 0;
+  line-height: 1.8; /* More readable line height */
+  color: #4a4a4a;
+  font-size: 1.7rem; /* Increased from 1rem */
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .faq-custom-scope {
+    /* Adjust this if you remove the overlap on mobile in the other section */
+    padding-top: 80px;
+  }
+
+  .faq-custom-scope__headline {
+    font-size: 2.25rem;
+    margin-bottom: 40px;
+  }
+
+  .faq-custom-scope__header {
+    padding: 24px;
+  }
+
+  .faq-custom-scope__question {
+    font-size: 1.2rem;
+  }
+
+  .faq-custom-scope__answer {
+    padding: 0 24px 24px 24px;
+    font-size: 1rem;
+  }
+}
+
+/* =========================================
+           NEW INVESTOR SERVICES SECTION STYLES
+           ========================================= */
+.investor-services-section {
+  padding: 80px 20px;
+  background-color: #ffffff; /* White background as requested */
+  font-family: "Lato", sans-serif;
+}
+
+.investor-services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background-color: #f9f8f6; /* Cream/Beige background from image */
+  border-radius: 20px;
+  padding: 40px 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Icon Wrapper - Replace inner SVG with <img> if needed */
+.service-icon-wrapper {
+  background-color: #c0a676; /* Gold background for placeholder icon */
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+/* If you use real images later, use this class */
+.service-icon-img {
+  width: 64px;
+  height: auto;
+  margin-bottom: 24px;
+}
+
+.service-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #051122;
+  margin: 0 0 16px 0;
+  font-weight: 700;
+}
+
+.service-desc {
+  font-size: 1.35rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.service-list-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  font-size: 1.35rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.service-check-icon {
+  color: #c0a676; /* Gold checkmark */
+  margin-right: 12px;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 3px; /* Align with text top */
+}
+
+@media (max-width: 992px) {
+  .investor-services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .investor-services-container {
+    grid-template-columns: 1fr;
+  }
+  .service-card {
+    padding: 30px 20px;
+  }
+}
+
+/* =========================================
+           WHY INVEST SECTION STYLES
+           ========================================= */
+
+/* Section Wrapper */
+.investors-why-section {
+  background-color: var(--cream); /* Cream/Off-white background */
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* Container to constrain width */
+.investors-why-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Header */
+.investors-why-header {
+  margin-bottom: 80px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.investors-why-title {
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  color: #051122; /* Deep Navy */
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.investors-why-subtitle {
+  font-size: 2rem;
+  color: #051122;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* The Grid Layout */
+.investors-why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 Columns */
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Individual Item */
+.why-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Icon Image Styling */
+.why-icon-img {
+  width: 120px; /* Adjust based on your actual icon size */
+  height: 120px; /* Adjust based on your actual icon size */
+  margin-bottom: 32px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Item Title */
+.why-item-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  color: #051122;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+/* Item Description */
+.why-item-desc {
+  font-size: 1.5rem;
+  color: #333333;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 260px; /* Ensures text doesn't stretch too wide */
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 1024px) {
+  .investors-why-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 Columns on tablet */
+    gap: 60px 40px;
+  }
+  .why-item-desc {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .investors-why-section {
+    padding: 60px 20px;
+  }
+
+  .investors-why-title {
+    font-size: 2.25rem;
+  }
+
+  .investors-why-grid {
+    grid-template-columns: 1fr; /* 1 Column on mobile */
+    gap: 50px;
+  }
+}
+
+/* --- CUSTOM STYLES FOR EXPLORE LOCATION SECTION --- */
+.explore-location {
+  background-color: var(--deep-navy); /* Dark navy background */
+  color: #ffffff;
+  padding: 80px 20px;
+}
+
+.explore-location .container {
+  margin: 0 auto;
+}
+
+.explore-location .section-title {
+  font-size: 4rem;
+  font-weight: 600;
+  font-family: var(--fontFamily-playfair);
+  color: #ffffff;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.explore-location .section-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--quick-silver);
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.explore-location .location-grid {
+  display: grid;
+  margin-block: 64px;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .explore-location .location-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.location-card {
+  display: flex;
+  background: transparent;
+  overflow: hidden;
+  align-items: stretch;
+  min-height: 350px; /* Ensure a minimum height for visual balance */
+}
+
+@media (max-width: 768px) {
+  .location-card {
+    flex-direction: column;
+  }
+}
+
+.location-card-image {
+  flex: 1; /* Takes up 50% width on desktop */
+  min-width: 50%;
+  overflow: hidden;
+}
+
+.location-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.location-card-image img:hover {
+  transform: scale(1.05);
+}
+
+.location-card-content {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.location-card-content h3 {
+  font-size: 3rem;
+  font-family: var(--fontFamily-playfair);
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.location-card-content p {
+  font-size: 1.3rem;
+  line-height: 1.4;
+  font-family: var(--fontFamily-lato);
+  margin-bottom: 25px;
+  color: #b0b0b0;
+}
+
+.location-card .btn-outline {
+  display: inline-block;
+  padding: 12px 25px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+  align-self: flex-start; /* Aligns button to the left */
+}
+
+.location-card .btn-outline:hover {
+  background-color: #ffffff;
+  color: #0c1a2c;
 }

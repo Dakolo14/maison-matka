@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply for Property | Maison Matka Management</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/apply.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <div class="preload" data-preaload>
+      <div class="circle"></div>
+      <p class="text">Maison Matka</p>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="topbar">
+      <div class="container">
+        <address class="topbar-item">
+          <div class="icon">
+            <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span"> Serving Calgary & Red Deer, Alberta </span>
+        </address>
+
+        <div class="topbar-item item-2"></div>
+
+        <a href="tel:+14031234567" class="topbar-item link">
+          <div class="icon">
+            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span"> +1 (403) 123-4567 </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" data-header>
+      <div class="container">
+        <a href="index.html" class="logo">
+          <h1 class="logo-text">Maison Matka</h1>
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <button class="close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="index.html" class="navbar-link hover-underline">
+                <div class="separator"></div>
+                <span class="span">Home</span>
+              </a>
+            </li>
+            <li class="navbar-item dropdown-item">
+              <a href="#" class="navbar-link dropdown-toggle">
+                <div class="separator"></div>
+                <div class="dropdown-link">
+                  <span class="span">About Us</span>
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </div>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-subitem">
+                  <a href="about.html" class="dropdown-sublink">About Us</a>
+                </li>
+                <li class="dropdown-subitem">
+                  <a href="story.html" class="dropdown-sublink">Our Story</a>
+                </li>
+                <li class="dropdown-subitem">
+                  <a href="career.html" class="dropdown-sublink">Career</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navbar-item">
+              <a href="services.html" class="navbar-link hover-underline">
+                <div class="separator"></div>
+                <span class="span">Services</span>
+              </a>
+            </li>
+            <li class="navbar-item dropdown-item">
+              <a href="property.html" class="navbar-link dropdown-toggle">
+                <div class="separator"></div>
+                <div class="dropdown-link">
+                  <span class="span">Properties</span>
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </div>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-subitem">
+                  <a href="investors.html" class="dropdown-sublink"
+                    >Investors</a
+                  >
+                </li>
+                <li class="dropdown-subitem">
+                  <a href="rent.html" class="dropdown-sublink">Rent</a>
+                </li>
+                <li class="dropdown-subitem">
+                  <a href="listings.html" class="dropdown-sublink">Listing</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navbar-item">
+              <a href="contact.html" class="navbar-link hover-underline">
+                <div class="separator"></div>
+                <span class="span">Contact Us</span>
+              </a>
+            </li>
+          </ul>
+          <div class="text-center">
+            <p class="headline-1 navbar-title">Our Locations</p>
+            <address class="body-4">
+              Calgary & Red Deer, <br />
+              Alberta, Canada
+            </address>
+            <div class="separator"></div>
+            <p class="contact-label">Get in Touch</p>
+            <a
+              href="tel:+14031234567"
+              class="body-1 contact-number hover-underline"
+            >
+              +1 (403) 123-4567
+            </a>
+          </div>
+        </nav>
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span>
+        </button>
+
+        <div class="overlay" data-nav-toggler data-overlay></div>
+      </div>
+    </header>
+
+    <main>
+      <div
+        class="breadcrumbs"
+        style="background-image: url('./assets/images/hero-bg.jpg')"
+      >
+        <div class="container content">
+          <h2>Application Form</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="listings.html">Properties</a></li>
+            <li>Apply</li>
+          </ol>
+        </div>
+      </div>
+
+      <section class="application-form-section">
+        <div class="container">
+          <form class="application-form" action="#" method="POST">
+            <div class="form-job-title">
+              <h2>
+                Application for:
+                <span id="app-property-title">General Application</span>
+              </h2>
+              <p style="margin-top: 5px; color: #666">
+                Reference ID: <span id="app-ref-id">MM-GEN-001</span>
+              </p>
+            </div>
+
+            <!-- Personal Details -->
+            <div class="form-section">
+              <h3 class="section-title">Personal Information</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName"
+                    >First Name <span class="required">*</span></label
+                  >
+                  <input type="text" id="firstName" name="firstName" required />
+                </div>
+                <div class="form-group">
+                  <label for="lastName"
+                    >Last Name <span class="required">*</span></label
+                  >
+                  <input type="text" id="lastName" name="lastName" required />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email"
+                    >Email Address <span class="required">*</span></label
+                  >
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone"
+                    >Phone Number <span class="required">*</span></label
+                  >
+                  <input type="tel" id="phone" name="phone" required />
+                </div>
+              </div>
+            </div>
+
+            <!-- Application Type (Rent vs Invest) -->
+            <div class="form-section">
+              <h3 class="section-title">Application Details</h3>
+              <div class="form-group">
+                <label for="applicationType"
+                  >I am applying to: <span class="required">*</span></label
+                >
+                <select id="applicationType" name="applicationType" required>
+                  <option value="" disabled selected>Select an option</option>
+                  <option value="rent">Rent this Property</option>
+                  <option value="invest">Invest / Buy this Property</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="offerAmount"
+                    >Offer Amount / Monthly Rent Budget</label
+                  >
+                  <input
+                    type="text"
+                    id="offerAmount"
+                    name="offerAmount"
+                    placeholder="$"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="moveInDate">Desired Move-in / Closing Date</label>
+                  <input type="date" id="moveInDate" name="moveInDate" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Additional Notes / Proposal</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell us more about your offer or rental history..."
+                ></textarea>
+              </div>
+            </div>
+
+            <!-- Documents -->
+            <div class="form-section">
+              <h3 class="section-title">Documents</h3>
+              <div class="form-group">
+                <label>Upload ID or Proof of Funds (Optional)</label>
+                <div class="file-upload">
+                  <div class="file-upload-container">
+                    <input type="file" class="file-input" id="resume" />
+                    <div class="file-upload-text">
+                      <p>Drag & drop files or Browse</p>
+                      <span class="file-limit"
+                        >Supported formats: PDF, JPG, PNG (Max 5MB)</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="submit-btn">
+                Submit Application
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <p class="copyright">Maison Matka @ 2025. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script>
+      // Same data store for consistency
+      const properties = {
+        1: { title: "Modern Downtown Condo" },
+        2: { title: "Spacious Family Home" },
+        3: { title: "Luxury Apartment Suite" },
+        4: { title: "Commercial Office Space" },
+        5: { title: "Cozy Suburban House" },
+        6: { title: "Modern Studio" },
+      };
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const propId = urlParams.get("id");
+
+      if (propId && properties[propId]) {
+        document.getElementById("app-property-title").textContent =
+          properties[propId].title;
+        document.getElementById(
+          "app-ref-id"
+        ).textContent = `MM-PROP-00${propId}`;
+      }
+    </script>
+  </body>
+</html>

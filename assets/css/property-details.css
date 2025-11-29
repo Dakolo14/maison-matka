@@ -1,0 +1,375 @@
+/*-----------------------------------*\
+  #PROPERTY DETAILS PAGE
+\*-----------------------------------*/
+
+.property-details-section {
+  padding: 60px 0;
+  background-color: var(--cream);
+}
+
+/* --- GALLERY GRID --- */
+.property-gallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 400px; /* Fixed height for main row */
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.gallery-main {
+  position: relative;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-side {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+}
+
+.gallery-item {
+  position: relative;
+  height: calc(50% - 7.5px); /* Split height minus gap */
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-main:hover .img-cover,
+.gallery-item:hover .img-cover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .property-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px auto;
+  }
+  .gallery-side {
+    flex-direction: row;
+    height: 100px;
+  }
+  .gallery-item {
+    height: 100%;
+    width: 50%;
+  }
+}
+
+/* --- LAYOUT --- */
+.property-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .property-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- LEFT CONTENT --- */
+.property-header-info {
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--stone);
+  padding-bottom: 25px;
+}
+
+.property-tag {
+  display: inline-block;
+  background-color: var(--gold);
+  color: var(--deep-navy);
+  padding: 6px 12px;
+  border-radius: 2px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.property-title-large {
+  font-family: "Playfair Display", serif;
+  font-size: 3.2rem;
+  color: var(--deep-navy);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.property-address {
+  font-size: 1.6rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Lato", sans-serif;
+  margin-bottom: 20px;
+}
+
+/* Specs Grid - White Box Style */
+.property-specs-grid {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.spec-box {
+  background-color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+.spec-box i {
+  width: 20px;
+  height: 20px;
+  color: var(--deep-navy);
+}
+
+.spec-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--deep-navy);
+  font-family: "Lato", sans-serif;
+  display: inline-flex;
+  gap: 4px;
+}
+
+/* Description */
+.property-description-block {
+  margin-bottom: 30px;
+}
+
+.details-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  color: var(--deep-navy);
+  margin-bottom: 15px;
+}
+
+.description-text {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 15px;
+  font-family: "Lato", sans-serif;
+}
+
+/* Amenities */
+.amenities-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  list-style: none;
+}
+
+.amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  color: var(--deep-navy);
+  font-family: "Lato", sans-serif;
+}
+
+.amenity-item i {
+  color: var(--gold);
+  width: 18px;
+  height: 18px;
+}
+
+/* --- SIDEBAR --- */
+.property-sidebar {
+  position: sticky;
+  top: 100px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--stone);
+}
+
+.price-tag {
+  font-family: "Lato", sans-serif;
+  font-size: 2.8rem;
+  color: var(--deep-navy);
+  font-weight: 700;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.price-sub {
+  font-size: 1.3rem;
+  color: #777;
+  margin-bottom: 25px;
+  display: block;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sidebar-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.apply-btn {
+  background-color: var(--deep-navy);
+  color: var(--cream);
+  text-align: center;
+  padding: 15px;
+  border-radius: 2px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--deep-navy);
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  display: block;
+}
+
+.apply-btn:hover {
+  background-color: var(--gold);
+  border-color: var(--gold);
+  color: var(--deep-navy);
+}
+
+.schedule-btn {
+  background-color: transparent;
+  color: var(--deep-navy);
+  text-align: center;
+  padding: 15px;
+  border-radius: 2px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--stone);
+  font-family: "Lato", sans-serif;
+  display: block;
+  cursor: pointer;
+}
+
+.schedule-btn:hover {
+  border-color: var(--deep-navy);
+}
+
+.agent-mini {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.agent-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.agent-details h4 {
+  font-size: 1.5rem;
+  color: var(--deep-navy);
+  margin-bottom: 2px;
+  font-family: "Playfair Display", serif;
+}
+
+.agent-details p {
+  font-size: 1.2rem;
+  color: #777;
+  font-family: "Lato", sans-serif;
+}
+
+/* --- LIGHTBOX --- */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.close-lightbox:hover {
+  color: var(--gold);
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 10000;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(197, 164, 109, 0.8);
+}

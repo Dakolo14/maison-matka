@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property Details | Maison Matka Management</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/property-details.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preload" data-preaload>
+      <div class="circle"></div>
+      <p class="text">Maison Matka</p>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="topbar">
+      <div class="container">
+        <address class="topbar-item">
+          <div class="icon">
+            <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span"> Serving Calgary & Red Deer, Alberta </span>
+        </address>
+
+        <div class="topbar-item item-2"></div>
+
+        <a href="tel:+14031234567" class="topbar-item link">
+          <div class="icon">
+            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span"> +1 (403) 123-4567 </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" data-header>
+      <div class="container">
+        <a href="index.html" class="logo">
+          <h1 class="logo-text">Maison Matka</h1>
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <button class="close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="index.html" class="navbar-link hover-underline">
+                <div class="separator"></div>
+                <span class="span">Home</span>
+              </a>
+            </li>
+            <li class="navbar-item dropdown-item">
+              <a href="#" class="navbar-link dropdown-toggle">
+                <div class="separator"></div>
+                <div class="dropdown-link">
+                  <span class="span">About Us</span>
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </div>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-subitem">
+                  <a href="about.html" class="dropdown-sublink">About Us</a>
+                </li>
+                <li class="dropdown-subitem">
+                  <a href="story.html" class="dropdown-sublink">Our Story</a>
+                </li>
+                <li class="dropdown-subitem">
+                  <a href="career.html" class="dropdown-sublink">Career</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navbar-item">
+              <a href="services.html" class="navbar-link hover-underline">
+                <div class="separator"></div>
+                <span class="span">Services</span>
+              </a>
+            </li>
+            <li class="navbar-item dropdown-item">
+              <a
+                href="property.html"
+                class="navbar-link dropdown-toggle active"
+              >
+                <div class="separator"></div>
+                <div class="dropdown-link active">
+                  <span class="span">Properties</span>
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </div>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-subitem">
+                  <a href="investors.html" class="dropdown-sublink"
+                    >Investors</a
+                  >
+                </li>
+                <li class="dropdown-subitem">
+                  <a href="rent.html" class="dropdown-sublink">Rent</a>
+                </li>
+                <li class="dropdown-subitem">
+                  <a href="listings.html" class="dropdown-sublink">Listing</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navbar-item">
+              <a href="contact.html" class="navbar-link hover-underline">
+                <div class="separator"></div>
+                <span class="span">Contact Us</span>
+              </a>
+            </li>
+          </ul>
+          <div class="text-center">
+            <p class="headline-1 navbar-title">Our Locations</p>
+            <address class="body-4">
+              Calgary & Red Deer, <br />
+              Alberta, Canada
+            </address>
+            <div class="separator"></div>
+            <p class="contact-label">Get in Touch</p>
+            <a
+              href="tel:+14031234567"
+              class="body-1 contact-number hover-underline"
+            >
+              +1 (403) 123-4567
+            </a>
+          </div>
+        </nav>
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span>
+        </button>
+
+        <div class="overlay" data-nav-toggler data-overlay></div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Breadcrumbs -->
+      <div
+        class="breadcrumbs"
+        style="background-image: url('./assets/images/hero-bg.jpg')"
+      >
+        <div class="container content">
+          <h2 id="breadcrumb-title">Property Details</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="listings.html">Properties</a></li>
+            <li id="breadcrumb-active">Details</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Property Details Section -->
+      <section class="property-details-section">
+        <div class="container">
+          <!-- Gallery -->
+          <div class="property-gallery" id="gallery-container">
+            <!-- Images injected via JS -->
+          </div>
+
+          <!-- Content Layout -->
+          <div class="property-container">
+            <!-- Left Side: Info -->
+            <div class="property-main-content">
+              <div class="property-header-info">
+                <span class="property-tag" id="property-tag">For Sale</span>
+                <h1 class="property-title-large" id="property-title">
+                  Loading...
+                </h1>
+                <p class="property-address">
+                  <i data-lucide="map-pin" style="width: 18px; color: #666"></i>
+                  <span id="property-location">Loading...</span>
+                </p>
+
+                <!-- Specs with White BG Method -->
+                <div class="property-specs-grid">
+                  <div class="spec-box">
+                    <i data-lucide="bed"></i>
+                    <span class="spec-text"
+                      ><span id="spec-beds">-</span> Beds</span
+                    >
+                  </div>
+                  <div class="spec-box">
+                    <i data-lucide="bath"></i>
+                    <span class="spec-text"
+                      ><span id="spec-baths">-</span> Baths</span
+                    >
+                  </div>
+                  <div class="spec-box">
+                    <i data-lucide="maximize"></i>
+                    <span class="spec-text"
+                      ><span id="spec-sqft">-</span> Sq Ft</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="property-description-block">
+                <h3 class="details-heading">Description</h3>
+                <p class="description-text" id="property-desc">
+                  Loading description...
+                </p>
+              </div>
+
+              <div class="property-description-block">
+                <h3 class="details-heading">Amenities</h3>
+                <ul class="amenities-list">
+                  <li class="amenity-item">
+                    <i data-lucide="check-circle"></i> Air Conditioning
+                  </li>
+                  <li class="amenity-item">
+                    <i data-lucide="check-circle"></i> Gym / Fitness Center
+                  </li>
+                  <li class="amenity-item">
+                    <i data-lucide="check-circle"></i> Underground Parking
+                  </li>
+                  <li class="amenity-item">
+                    <i data-lucide="check-circle"></i> Concierge Service
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Side: Sticky Action Card -->
+            <aside class="property-sidebar">
+              <div class="price-box">
+                <span class="price-tag" id="property-price">$-</span>
+                <span class="price-sub" id="price-label">Listing Price</span>
+              </div>
+
+              <div class="sidebar-actions">
+                <!-- Default href ensures navigation even if JS fails -->
+                <a
+                  href="application-form.html"
+                  id="apply-btn"
+                  class="apply-btn"
+                >
+                  Apply for Property
+                </a>
+                <a href="contact.html" class="schedule-btn">Schedule Viewing</a>
+              </div>
+
+              <div class="agent-mini">
+                <img
+                  src="./assets/images/agent-1.jpg"
+                  alt="Agent"
+                  class="agent-avatar"
+                />
+                <div class="agent-details">
+                  <h4>Sarah Jenkins</h4>
+                  <p>Listing Agent</p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox">
+      <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+      <img class="lightbox-content" id="lightboxImage" />
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <p class="copyright">Maison Matka @ 2025. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script>
+      // Property Data Store
+      const properties = {
+        1: {
+          title: "Modern Downtown Condo",
+          location: "Calgary, AB",
+          price: "$450,000",
+          tag: "For Sale",
+          beds: "2",
+          baths: "2",
+          sqft: "1,200",
+          images: [
+            "./assets/images/p-1.jpg",
+            "./assets/images/p-2.webp",
+            "./assets/images/p-3.jpg",
+          ],
+          desc: "Experience luxury living in the heart of Calgary. This stunning 2-bedroom, 2-bathroom condo offers breathtaking city views, modern finishes, and an open-concept layout perfect for entertaining.",
+        },
+        2: {
+          title: "Spacious Family Home",
+          location: "Red Deer, AB",
+          price: "$650,000",
+          tag: "For Sale",
+          beds: "4",
+          baths: "3",
+          sqft: "2,400",
+          images: [
+            "./assets/images/p-2.webp",
+            "./assets/images/p-1.jpg",
+            "./assets/images/p-3.jpg",
+          ],
+          desc: "A beautiful family home located in a quiet Red Deer neighborhood. Features a large backyard, modern kitchen, and spacious living areas ideal for a growing family.",
+        },
+        3: {
+          title: "Luxury Apartment Suite",
+          location: "Edmonton, AB",
+          price: "$2,200 / mo",
+          tag: "For Rent",
+          beds: "1",
+          baths: "1",
+          sqft: "850",
+          images: [
+            "./assets/images/p-3.jpg",
+            "./assets/images/p-1.jpg",
+            "./assets/images/p-2.webp",
+          ],
+          desc: "High-end apartment suite in Edmonton. Perfect for professionals, offering concierge service, gym access, and proximity to the business district.",
+        },
+        4: {
+          title: "Commercial Office Space",
+          location: "Calgary, AB",
+          price: "$1,200,000",
+          tag: "For Sale",
+          beds: "-",
+          baths: "2",
+          sqft: "3,000",
+          images: [
+            "./assets/images/first.jpg",
+            "./assets/images/second.jpg",
+            "./assets/images/third.jpg",
+          ],
+          desc: "Prime commercial real estate in downtown Calgary. Open floor plan, meeting rooms, and excellent visibility for your business.",
+        },
+        5: {
+          title: "Cozy Suburban House",
+          location: "Red Deer, AB",
+          price: "$380,000",
+          tag: "For Sale",
+          beds: "3",
+          baths: "2",
+          sqft: "1,800",
+          images: [
+            "./assets/images/second.jpg",
+            "./assets/images/first.jpg",
+            "./assets/images/third.jpg",
+          ],
+          desc: "Charming suburban home with great potential. Features a cozy fireplace, attached garage, and is close to schools and parks.",
+        },
+        6: {
+          title: "Modern Studio",
+          location: "Calgary, AB",
+          price: "$1,500 / mo",
+          tag: "For Rent",
+          beds: "Studio",
+          baths: "1",
+          sqft: "500",
+          images: [
+            "./assets/images/third.jpg",
+            "./assets/images/first.jpg",
+            "./assets/images/second.jpg",
+          ],
+          desc: "Efficient and stylish studio apartment in Calgary. Includes in-suite laundry and modern appliances. Ideal for students or young professionals.",
+        },
+      };
+
+      // Get ID from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const propId = urlParams.get("id");
+      const property = properties[propId];
+      let currentImageIndex = 0;
+      let currentPropertyImages = [];
+
+      // Update Apply Button Link immediately if ID exists
+      if (propId) {
+        const applyBtn = document.getElementById("apply-btn");
+        if (applyBtn) {
+          applyBtn.href = `application-form.html?id=${propId}`;
+        }
+      }
+
+      if (property) {
+        currentPropertyImages = property.images;
+        document.title = property.title + " | Maison Matka";
+        document.getElementById("breadcrumb-title").textContent =
+          property.title;
+        document.getElementById("breadcrumb-active").textContent =
+          property.title;
+
+        // Populate Gallery
+        const galleryContainer = document.getElementById("gallery-container");
+        galleryContainer.innerHTML = "";
+
+        // Create Main Image
+        const mainDiv = document.createElement("div");
+        mainDiv.className = "gallery-main";
+        mainDiv.innerHTML = `<img src="${property.images[0]}" alt="${property.title}" class="img-cover" onclick="openLightbox(0)">`;
+        galleryContainer.appendChild(mainDiv);
+
+        // Create Side Images Container
+        const sideDiv = document.createElement("div");
+        sideDiv.className = "gallery-side";
+
+        // Add up to 2 side images
+        for (let i = 1; i < Math.min(property.images.length, 3); i++) {
+          const itemDiv = document.createElement("div");
+          itemDiv.className = "gallery-item";
+          itemDiv.innerHTML = `<img src="${property.images[i]}" alt="View ${i}" class="img-cover" onclick="openLightbox(${i})">`;
+          sideDiv.appendChild(itemDiv);
+        }
+        galleryContainer.appendChild(sideDiv);
+
+        // Populate Info
+        document.getElementById("property-tag").textContent = property.tag;
+        document.getElementById("property-title").textContent = property.title;
+        document.getElementById("property-location").textContent =
+          property.location;
+
+        document.getElementById("spec-beds").textContent = property.beds;
+        document.getElementById("spec-baths").textContent = property.baths;
+        document.getElementById("spec-sqft").textContent = property.sqft;
+
+        document.getElementById("property-desc").textContent = property.desc;
+        document.getElementById("property-price").textContent = property.price;
+
+        // Dynamic Label for Rent vs Sale
+        const priceLabel =
+          property.tag === "For Rent" ? "Monthly Rent" : "Listing Price";
+        document.getElementById("price-label").textContent = priceLabel;
+
+        // Update Apply Button Link
+        const applyBtn = document.getElementById("apply-btn");
+        if (applyBtn) {
+          applyBtn.href = `application-form.html?id=${propId}`;
+        }
+
+        // Initialize Lucide Icons if available
+        if (typeof lucide !== "undefined") {
+          lucide.createIcons();
+        }
+      } else {
+        document.querySelector(".property-main-content").innerHTML =
+          "<h1>Property not found.</h1>";
+      }
+
+      // Lightbox Logic
+      function openLightbox(index) {
+        currentImageIndex = index;
+        document.getElementById("lightboxModal").style.display = "block";
+        showSlide(currentImageIndex);
+      }
+
+      function closeLightbox() {
+        document.getElementById("lightboxModal").style.display = "none";
+      }
+
+      function changeSlide(n) {
+        currentImageIndex += n;
+        if (currentImageIndex >= currentPropertyImages.length) {
+          currentImageIndex = 0;
+        } else if (currentImageIndex < 0) {
+          currentImageIndex = currentPropertyImages.length - 1;
+        }
+        showSlide(currentImageIndex);
+      }
+
+      function showSlide(index) {
+        const lightboxImg = document.getElementById("lightboxImage");
+        lightboxImg.src = currentPropertyImages[index];
+      }
+    </script>
+  </body>
+</html>

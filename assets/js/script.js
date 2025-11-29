@@ -198,3 +198,72 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// Initialize icons
+lucide.createIcons();
+
+// JavaScript for Search and Filter Functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("searchInput");
+  const locationSelect = document.getElementById("locationSelect");
+  const typeSelect = document.getElementById("typeSelect");
+  const minPriceInput = document.getElementById("minPrice");
+  const maxPriceInput = document.getElementById("maxPrice");
+  const clearSelectionBtn = document.getElementById("clearSelectionBtn");
+  const cards = document.querySelectorAll(".listing-card");
+  const noResultsMsg = document.getElementById("noResults");
+
+  function filterProperties() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const selectedLocation = locationSelect.value;
+    const selectedType = typeSelect.value;
+    const minPrice = parseFloat(minPriceInput.value) || 0;
+    const maxPrice = parseFloat(maxPriceInput.value) || Infinity;
+
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+      const title = card.getAttribute("data-title").toLowerCase();
+      const location = card.getAttribute("data-location");
+      const type = card.getAttribute("data-type");
+      const price = parseFloat(card.getAttribute("data-price"));
+
+      const matchesSearch = title.includes(searchTerm);
+      const matchesLocation =
+        selectedLocation === "" || location === selectedLocation;
+      const matchesType = selectedType === "" || type === selectedType;
+      const matchesPrice = price >= minPrice && price <= maxPrice;
+
+      if (matchesSearch && matchesLocation && matchesType && matchesPrice) {
+        card.classList.remove("hidden");
+        visibleCount++;
+      } else {
+        card.classList.add("hidden");
+      }
+    });
+
+    // Show/Hide No Results Message
+    if (visibleCount === 0) {
+      noResultsMsg.classList.add("visible");
+    } else {
+      noResultsMsg.classList.remove("visible");
+    }
+  }
+
+  // Event Listeners
+  searchInput.addEventListener("input", filterProperties);
+  locationSelect.addEventListener("change", filterProperties);
+  typeSelect.addEventListener("change", filterProperties);
+  minPriceInput.addEventListener("input", filterProperties);
+  maxPriceInput.addEventListener("input", filterProperties);
+
+  // Clear Selection / Reset Button
+  clearSelectionBtn.addEventListener("click", () => {
+    searchInput.value = "";
+    locationSelect.value = "";
+    typeSelect.value = "";
+    minPriceInput.value = "";
+    maxPriceInput.value = "";
+    filterProperties();
+  });
+});

@@ -10,156 +10,170 @@
 }
 
 .application-form-section {
-  padding: 50px 0;
+  padding: 80px 0;
   background-color: var(--cream);
 }
 
 .application-form {
-  max-width: 900px;
+  max-width: 700px; /* Slightly narrower for better focus */
   margin: 0 auto;
-  background-color: white;
-  border-radius: 8px;
-  padding: 30px;
-  box-shadow: 0 3px 10px rgba(10, 26, 47, 0.1);
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
   color: var(--deep-navy);
 }
 
 .form-job-title {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   padding-bottom: 20px;
   border-bottom: 1px solid var(--stone);
 }
 
 .form-job-title h2 {
-  font-size: 2.2rem;
-  font-weight: 600;
+  font-size: 2.8rem;
+  font-weight: 500;
   color: var(--deep-navy);
   font-family: "Playfair Display", serif;
+  line-height: 1.3;
 }
 
 .form-job-title span {
   color: var(--gold);
-  font-weight: 700;
+  font-style: italic;
 }
 
 .form-section {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .section-title {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--gold);
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--stone);
-  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--deep-navy);
+  margin-bottom: 30px;
+  padding-bottom: 0;
+  border-bottom: none;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .form-row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 40px; /* Increased gap */
+  margin-bottom: 10px;
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
+  position: relative;
 }
 
 .form-group label {
   display: block;
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: var(--deep-navy);
+  font-size: 1.1rem; /* Smaller, technical look */
+  font-weight: 600;
+  color: #888;
   margin-bottom: 8px;
   font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: color 0.3s;
+}
+
+.form-group:focus-within label {
+  color: var(--deep-navy);
 }
 
 .form-group input,
 .form-group textarea,
 .form-group select {
   width: 100%;
-  padding: 12px 15px;
-  border: 1px solid var(--stone);
-  border-radius: 4px;
-  font-size: 1.5rem;
+  padding: 10px 0 15px 0;
+  border: none;
+  border-bottom: 1px solid #ccc; /* Lighter default border */
+  border-radius: 0;
+  font-size: 1.8rem; /* Larger input text */
   color: var(--deep-navy);
-  transition: border-color 0.3s;
-  background-color: var(--cream);
-  font-family: "Lato", sans-serif;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  font-family: "Playfair Display", serif; /* Serif for user input = Luxury */
 }
 
+/* Hover state for inputs */
+.form-group input:hover,
+.form-group textarea:hover,
+.form-group select:hover {
+  border-bottom-color: var(--deep-navy);
+}
+
+/* Focus state */
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
-  border-color: var(--gold);
+  border-bottom: 2px solid var(--gold);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(197, 164, 109, 0.1);
+  box-shadow: none;
+  padding-bottom: 14px; /* Adjust for border width change */
 }
 
 .form-group textarea {
-  min-height: 120px;
+  min-height: 80px;
   resize: vertical;
+  border: 1px solid #ccc; /* Box for textarea */
+  padding: 15px;
+  font-family: "Lato", sans-serif; /* Keep sans-serif for long text */
+  font-size: 1.5rem;
+}
+
+.form-group textarea:focus {
+  border-color: var(--gold);
 }
 
 .required {
   color: var(--gold);
+  margin-left: 2px;
 }
 
-/* File upload styling */
+/* File upload styling - Elegant Box */
 .file-upload {
   margin-bottom: 20px;
 }
 
 .file-upload-container {
   position: relative;
-  border: 2px dashed var(--stone);
-  border-radius: 15px;
+  border: 1px solid var(--stone); /* Solid, not dashed */
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0;
   padding: 40px 20px;
   text-align: center;
   cursor: pointer;
-  transition: border-color 0.3s, background-color 0.3s;
+  transition: all 0.3s ease;
   margin-bottom: 15px;
   overflow: hidden;
-  background-color: var(--cream);
 }
 
-.file-upload-container:hover,
-.file-upload-container.highlight {
-  border-color: var(--gold);
-  background-color: rgba(197, 164, 109, 0.05);
-}
-
-.file-upload-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+.file-upload-container:hover {
+  border-color: var(--deep-navy);
+  background-color: #fff;
 }
 
 .file-upload-text p {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: var(--deep-navy);
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   font-family: "Lato", sans-serif;
-}
-
-.file-upload-text::before {
-  content: "";
-  display: block;
-  width: 50px;
-  height: 50px;
-  background-image: url("../images/upload.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-bottom: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .file-limit {
-  font-size: 1.3rem;
-  color: #777;
+  font-size: 1.2rem;
+  color: #888;
+  font-family: "Lato", sans-serif;
 }
 
 .file-input {
@@ -172,82 +186,31 @@
   cursor: pointer;
 }
 
-.file-preview {
-  margin-top: 15px;
-}
-
-.file-preview-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  background-color: var(--stone);
-  padding: 12px 15px;
-  border-radius: 10px;
-}
-
-.file-preview-item ion-icon {
-  font-size: 2.4rem;
-  color: var(--gold);
-}
-
-.file-info {
-  flex: 1;
-}
-
-.file-name {
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: var(--deep-navy);
-  margin-bottom: 4px;
-  font-family: "Lato", sans-serif;
-}
-
-.file-size {
-  font-size: 1.2rem;
-  color: #777;
-}
-
-.remove-file {
-  background: none;
-  border: none;
-  color: #777;
-  cursor: pointer;
-  font-size: 1.8rem;
-  transition: color 0.3s;
-}
-
-.remove-file:hover {
-  color: #ff3333;
-}
-
 /* Submit button styling */
 .form-actions {
-  margin-top: 40px;
+  margin-top: 60px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .submit-btn {
-  background-color: var(--gold);
-  color: var(--deep-navy);
-  border: none;
-  border-radius: 50px;
-  padding: 12px 35px;
-  font-size: 1.6rem;
-  font-weight: 500;
+  background-color: var(--deep-navy);
+  color: var(--cream);
+  border: 1px solid var(--deep-navy);
+  border-radius: 0;
+  padding: 18px 50px;
+  font-size: 1.4rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
   font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .submit-btn:hover {
-  background-color: var(--deep-navy);
-  color: var(--cream);
-}
-
-.submit-btn:disabled {
-  background-color: var(--stone);
-  cursor: not-allowed;
+  background-color: transparent;
+  color: var(--deep-navy);
 }
 
 /* Responsive styling */
@@ -258,19 +221,11 @@
   }
 
   .application-form {
-    padding: 20px;
+    padding: 0 20px;
   }
 
   .form-job-title h2 {
-    font-size: 1.8rem;
-  }
-
-  .section-title {
-    font-size: 1.6rem;
-  }
-
-  .form-actions {
-    justify-content: center;
+    font-size: 2.2rem;
   }
 
   .submit-btn {

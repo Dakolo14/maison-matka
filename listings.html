@@ -4,72 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- =========================================
-        SEO OPTIMIZATION FOR DUAL-PURPOSE PROPERTY PAGE (INVESTOR & RENTER)
-        ========================================= -->
-    <title>
-      Alberta Investment & Rental Properties | Buy, Rent, or Manage Real Estate
-      | Maison Matka Management
-    </title>
-
-    <!-- Standard Meta Tags -->
-    <meta
-      name="title"
-      content="Alberta Investment & Rental Properties | Buy, Rent, or Manage Real Estate | Maison Matka Management"
-    />
+    <!--Primary Tags-->
+    <title>Property Listings | Maison Matka Management</title>
+    <meta name="title" content="Property Listings | Maison Matka Management" />
     <meta
       name="description"
-      content="Explore high-potential investment properties for sale and premium residential rental homes in Calgary, Edmonton, and Red Deer. Your full-service partner for real estate management and leasing."
-    />
-    <meta
-      name="keywords"
-      content="real estate investment Alberta, homes for rent Calgary, buy-to-rent property, Red Deer rentals, property management services, investment analysis, luxury apartments AB, Maison Matka"
-    />
-
-    <!-- Geo Tags for Local SEO -->
-    <meta name="geo.region" content="CA-AB" />
-    <meta name="geo.placename" content="Calgary, Edmonton, Red Deer, Alberta" />
-    <meta name="geo.position" content="53.9333;-116.5765" />
-    <meta name="ICBM" content="53.9333, -116.5765" />
-
-    <!-- Open Graph Tags for Social Media Sharing -->
-    <meta
-      property="og:title"
-      content="Alberta Investment & Rental Properties | Maison Matka"
-    />
-    <meta
-      property="og:description"
-      content="Find premium investment opportunities or your next rental home in Alberta. Professionally managed properties for buying and leasing."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="[YOUR_CANONICAL_URL_HERE]" />
-    <meta property="og:image" content="[URL_TO_A_HIGH_QUALITY_PREVIEW_IMAGE]" />
-    <meta property="og:locale" content="en_CA" />
-
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@MaisonMatka" />
-    <meta name="twitter:creator" content="@MaisonMatka" />
-    <meta
-      name="twitter:title"
-      content="Alberta Investment & Rental Properties | Maison Matka"
+      content="Browse our curated list of properties for rent and sale in Calgary and Red Deer. Find your next home or investment opportunity with Maison Matka."
     />
 
     <!--Favicon-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-    <!-- EXISTING EXTERNAL LINKS (PRESERVED) -->
-    <link
-      href="./assets/external/swiper/swiper-bundle.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <!--
-        Google Font Links
-        -->
+    <!-- Google Font Links -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -77,43 +23,24 @@
       rel="stylesheet"
     />
 
-    <!--
-        Custom CSS Links
-        -->
+    <!-- Custom CSS Links -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/agents.css" />
     <link rel="stylesheet" href="./assets/css/testimonial.css" />
     <link rel="stylesheet" href="./assets/css/cta.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
 
-    <!--
-        Preload Images
-        -->
-    <link rel="Preload" as="image" href="./assets/images/hero-slider-1.jpg" />
-    <link rel="Preload" as="image" href="./assets/images/hero-slider-2.jpg" />
-    <link rel="Preload" as="image" href="./assets/images/hero-slider-3.jpg" />
-
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-
-    <!-- =======================================================
-            * Developer Name: Ajose Damilare
-            * Developer URL: https://ajosedamilare.com/
-            * Updated: Jan 2025
-      ======================================================== -->
   </head>
   <body>
-    <!--
-    PRELOADER
-    -->
+    <!-- PRELOADER -->
     <div class="preload" data-preaload>
       <div class="circle"></div>
       <p class="text">Maison Matka</p>
     </div>
 
-    <!--
-        Top Bar
-    -->
+    <!-- Top Bar -->
     <div class="topbar">
       <div class="container">
         <address class="topbar-item">
@@ -134,9 +61,7 @@
       </div>
     </div>
 
-    <!--
-      HEADER
-      -->
+    <!-- HEADER -->
     <header class="header" data-header>
       <div class="container">
         <a href="index.html" class="logo">
@@ -181,12 +106,9 @@
               </a>
             </li>
             <li class="navbar-item dropdown-item">
-              <a
-                href="property.html"
-                class="navbar-link dropdown-toggle active"
-              >
+              <a href="#" class="navbar-link dropdown-toggle active">
                 <div class="separator"></div>
-                <div class="dropdown-link">
+                <div class="dropdown-link active">
                   <span class="span">Properties</span>
                   <ion-icon name="chevron-down-outline"></ion-icon>
                 </div>
@@ -241,19 +163,385 @@
 
     <main>
       <div class="main-content">
+        <!-- Breadcrumbs -->
         <div
           class="breadcrumbs"
           style="background-image: url('./assets/images/hero-bg.jpg')"
         >
           <div class="container content">
-            <h2>Listings</h2>
+            <h2>Property Listings</h2>
+            <p class="hero-subtitle-about">Find your perfect space</p>
             <ol>
               <li><a href="index.html">Home</a></li>
-              <li>Listings</li>
+              <li><a href="#">Properties</a></li>
+              <li>Listing</li>
             </ol>
           </div>
         </div>
 
+        <!-- Search & Filter Section -->
+        <section class="property-search-section">
+          <div class="search-container">
+            <!-- Search Bar -->
+            <div class="search-bar-wrapper">
+              <i data-lucide="search" class="search-icon"></i>
+              <input
+                type="text"
+                id="searchInput"
+                class="search-bar-input"
+                placeholder="Search by property name, city, or keyword..."
+              />
+            </div>
+
+            <!-- Filters Row -->
+            <div class="filters-row">
+              <div class="filter-group">
+                <label class="filter-label">Location:</label>
+                <select id="locationSelect" class="filter-select">
+                  <option value="">All Cities</option>
+                  <option value="Calgary">Calgary</option>
+                  <option value="Red Deer">Red Deer</option>
+                  <option value="Edmonton">Edmonton</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label class="filter-label">Type:</label>
+                <select id="typeSelect" class="filter-select">
+                  <option value="">All Types</option>
+                  <option value="Apartment">Apartment</option>
+                  <option value="House">House</option>
+                  <option value="Condo">Condo</option>
+                  <option value="Commercial">Commercial</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label class="filter-label">Price:</label>
+                <input
+                  type="number"
+                  id="minPrice"
+                  class="price-input"
+                  placeholder="Min"
+                />
+                <span style="color: #0a1a2f">-</span>
+                <input
+                  type="number"
+                  id="maxPrice"
+                  class="price-input"
+                  placeholder="Max"
+                />
+              </div>
+
+              <button id="clearSelectionBtn" class="view-all-btn">
+                Clear Selection
+              </button>
+            </div>
+
+            <!-- Listings Grid -->
+            <div class="listing-grid">
+              <!-- Card 1 -->
+              <a href="property-details.html?id=1" class="listing-card-link">
+                <div
+                  class="listing-card"
+                  data-title="Modern Downtown Condo"
+                  data-location="Calgary"
+                  data-type="Condo"
+                  data-price="450000"
+                >
+                  <div class="listing-image-container">
+                    <img
+                      src="./assets/images/p-1.jpg"
+                      alt="Modern Downtown Condo"
+                      class="listing-img"
+                    />
+                    <div class="listing-badges">
+                      <span class="badge">For Sale</span>
+                      <span
+                        class="badge"
+                        style="background-color: #fff; color: #0a1a2f"
+                        >Featured</span
+                      >
+                    </div>
+                    <div class="listing-stats-overlay">
+                      <div class="stat-box">
+                        <i data-lucide="bed" class="stat-icon"></i> 2
+                      </div>
+                      <div class="stat-box">
+                        <i data-lucide="bath" class="stat-icon"></i> 2
+                      </div>
+                      <div class="stat-box">
+                        <i data-lucide="maximize" class="stat-icon"></i> 1,200
+                        sqft
+                      </div>
+                    </div>
+                  </div>
+                  <h3 class="listing-title">Modern Downtown Condo</h3>
+                  <div class="listing-location">
+                    <i data-lucide="map-pin" class="location-icon"></i>
+                    Calgary, AB
+                  </div>
+                  <div
+                    style="
+                      margin-top: 10px;
+                      font-weight: 600;
+                      font-size: 1.6rem;
+                      color: #0a1a2f;
+                    "
+                  >
+                    $450,000
+                  </div>
+                </div>
+              </a>
+
+              <!-- Card 2 -->
+              <a href="property-details.html?id=2" class="listing-card-link">
+                <div
+                  class="listing-card"
+                  data-title="Spacious Family Home"
+                  data-location="Red Deer"
+                  data-type="House"
+                  data-price="650000"
+                >
+                  <div class="listing-image-container">
+                    <img
+                      src="./assets/images/p-2.webp"
+                      alt="Spacious Family Home"
+                      class="listing-img"
+                    />
+                    <div class="listing-badges">
+                      <span class="badge">For Sale</span>
+                    </div>
+                    <div class="listing-stats-overlay">
+                      <div class="stat-box">
+                        <i data-lucide="bed" class="stat-icon"></i> 4
+                      </div>
+                      <div class="stat-box">
+                        <i data-lucide="bath" class="stat-icon"></i> 3
+                      </div>
+                      <div class="stat-box">
+                        <i data-lucide="maximize" class="stat-icon"></i> 2,400
+                        sqft
+                      </div>
+                    </div>
+                  </div>
+                  <h3 class="listing-title">Spacious Family Home</h3>
+                  <div class="listing-location">
+                    <i data-lucide="map-pin" class="location-icon"></i>
+                    Red Deer, AB
+                  </div>
+                  <div
+                    style="
+                      margin-top: 10px;
+                      font-weight: 600;
+                      font-size: 1.6rem;
+                      color: #0a1a2f;
+                    "
+                  >
+                    $650,000
+                  </div>
+                </div>
+              </a>
+
+              <!-- Card 3 -->
+              <a href="property-details.html?id=3" class="listing-card-link">
+                <div
+                  class="listing-card"
+                  data-title="Luxury Apartment Suite"
+                  data-location="Edmonton"
+                  data-type="Apartment"
+                  data-price="2200"
+                >
+                  <div class="listing-image-container">
+                    <img
+                      src="./assets/images/p-3.jpg"
+                      alt="Luxury Apartment Suite"
+                      class="listing-img"
+                    />
+                    <div class="listing-badges">
+                      <span class="badge">For Rent</span>
+                    </div>
+                    <div class="listing-stats-overlay">
+                      <div class="stat-box">
+                        <i data-lucide="bed" class="stat-icon"></i> 1
+                      </div>
+                      <div class="stat-box">
+                        <i data-lucide="bath" class="stat-icon"></i> 1
+                      </div>
+                      <div class="stat-box">
+                        <i data-lucide="maximize" class="stat-icon"></i> 850
+                        sqft
+                      </div>
+                    </div>
+                  </div>
+                  <h3 class="listing-title">Luxury Apartment Suite</h3>
+                  <div class="listing-location">
+                    <i data-lucide="map-pin" class="location-icon"></i>
+                    Edmonton, AB
+                  </div>
+                  <div
+                    style="
+                      margin-top: 10px;
+                      font-weight: 600;
+                      font-size: 1.6rem;
+                      color: #0a1a2f;
+                    "
+                  >
+                    $2,200 / mo
+                  </div>
+                </div>
+              </a>
+
+              <!-- Card 4 -->
+              <a href="property-details.html?id=4" class="listing-card-link">
+                <div
+                  class="listing-card"
+                  data-title="Commercial Office Space"
+                  data-location="Calgary"
+                  data-type="Commercial"
+                  data-price="1200000"
+                >
+                  <div class="listing-image-container">
+                    <img
+                      src="./assets/images/first.jpg"
+                      alt="Commercial Office Space"
+                      class="listing-img"
+                    />
+                    <div class="listing-badges">
+                      <span class="badge">For Sale</span>
+                    </div>
+                    <div class="listing-stats-overlay">
+                      <div class="stat-box">
+                        <i data-lucide="maximize" class="stat-icon"></i> 3,000
+                        sqft
+                      </div>
+                    </div>
+                  </div>
+                  <h3 class="listing-title">Commercial Office Space</h3>
+                  <div class="listing-location">
+                    <i data-lucide="map-pin" class="location-icon"></i>
+                    Calgary, AB
+                  </div>
+                  <div
+                    style="
+                      margin-top: 10px;
+                      font-weight: 600;
+                      font-size: 1.6rem;
+                      color: #0a1a2f;
+                    "
+                  >
+                    $1,200,000
+                  </div>
+                </div>
+              </a>
+
+              <!-- Card 5 -->
+              <a href="property-details.html?id=5" class="listing-card-link">
+                <div
+                  class="listing-card"
+                  data-title="Cozy Suburban House"
+                  data-location="Red Deer"
+                  data-type="House"
+                  data-price="380000"
+                >
+                  <div class="listing-image-container">
+                    <img
+                      src="./assets/images/second.jpg"
+                      alt="Cozy Suburban House"
+                      class="listing-img"
+                    />
+                    <div class="listing-badges">
+                      <span class="badge">For Sale</span>
+                    </div>
+                    <div class="listing-stats-overlay">
+                      <div class="stat-box">
+                        <i data-lucide="bed" class="stat-icon"></i> 3
+                      </div>
+                      <div class="stat-box">
+                        <i data-lucide="bath" class="stat-icon"></i> 2
+                      </div>
+                      <div class="stat-box">
+                        <i data-lucide="maximize" class="stat-icon"></i> 1,800
+                        sqft
+                      </div>
+                    </div>
+                  </div>
+                  <h3 class="listing-title">Cozy Suburban House</h3>
+                  <div class="listing-location">
+                    <i data-lucide="map-pin" class="location-icon"></i>
+                    Red Deer, AB
+                  </div>
+                  <div
+                    style="
+                      margin-top: 10px;
+                      font-weight: 600;
+                      font-size: 1.6rem;
+                      color: #0a1a2f;
+                    "
+                  >
+                    $380,000
+                  </div>
+                </div>
+              </a>
+
+              <!-- Card 6 -->
+              <a href="property-details.html?id=6" class="listing-card-link">
+                <div
+                  class="listing-card"
+                  data-title="Modern Studio"
+                  data-location="Calgary"
+                  data-type="Apartment"
+                  data-price="1500"
+                >
+                  <div class="listing-image-container">
+                    <img
+                      src="./assets/images/third.jpg"
+                      alt="Modern Studio"
+                      class="listing-img"
+                    />
+                    <div class="listing-badges">
+                      <span class="badge">For Rent</span>
+                    </div>
+                    <div class="listing-stats-overlay">
+                      <div class="stat-box">
+                        <i data-lucide="bed" class="stat-icon"></i> Studio
+                      </div>
+                      <div class="stat-box">
+                        <i data-lucide="bath" class="stat-icon"></i> 1
+                      </div>
+                      <div class="stat-box">
+                        <i data-lucide="maximize" class="stat-icon"></i> 500
+                        sqft
+                      </div>
+                    </div>
+                  </div>
+                  <h3 class="listing-title">Modern Studio</h3>
+                  <div class="listing-location">
+                    <i data-lucide="map-pin" class="location-icon"></i>
+                    Calgary, AB
+                  </div>
+                  <div
+                    style="
+                      margin-top: 10px;
+                      font-weight: 600;
+                      font-size: 1.6rem;
+                      color: #0a1a2f;
+                    "
+                  >
+                    $1,500 / mo
+                  </div>
+                </div>
+              </a>
+
+              <!-- No Results Message -->
+              <div id="noResults" class="no-results">
+                <p>No properties found matching your criteria.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
         <footer class="footer">
           <div class="container">
             <div class="footer-top">
@@ -336,9 +624,9 @@
       </div>
     </main>
 
-    <!--Custom js link-->
+    <!-- Custom js link -->
     <script src="./assets/js/script.js"></script>
-    <!--Ionicon Link-->
+    <!-- Ionicon Link -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"

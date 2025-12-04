@@ -1,0 +1,339 @@
+/*-----------------------------------*\
+  #CONTACT PAGE STYLES
+\*-----------------------------------*/
+
+/* Contact Hero Section */
+.contact-hero-section {
+  background-color: var(--cream);
+  padding: 80px 20px;
+}
+
+.contact-hero-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.contact-hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 500;
+  color: var(--deep-navy);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.contact-hero-text {
+  font-family: "Lato", sans-serif;
+  font-size: 1.8rem;
+  color: var(--deep-navy);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  background-color: #fff;
+  padding: 100px 20px;
+}
+
+.contact-form-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+/* Left Side - Contact Info */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact-info-title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 500;
+  color: var(--deep-navy);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.contact-info-text {
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.contact-info-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--gold);
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-detail-block h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--deep-navy);
+  margin: 0 0 12px 0;
+}
+
+.contact-detail-block p,
+.contact-detail-block a {
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+  text-decoration: none;
+  display: block;
+}
+
+.contact-detail-block a:hover {
+  color: var(--gold);
+}
+
+/* Right Side - Form */
+.contact-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form-input,
+.contact-form-textarea {
+  width: 100%;
+  padding: 18px 24px;
+  border: 1px solid #e0dcd4;
+  border-radius: 4px;
+  background-color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  color: var(--deep-navy);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form-input::placeholder,
+.contact-form-textarea::placeholder {
+  color: #999;
+}
+
+.contact-form-input:focus,
+.contact-form-textarea:focus {
+  border-color: var(--gold);
+}
+
+.contact-form-textarea {
+  border-radius: 4px;
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form-submit {
+  width: 100%;
+  padding: 18px 18px;
+  background-color: var(--gold);
+  color: var(--deep-navy);
+  border: none;
+  border-radius: 4px;
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form-submit:hover {
+  background-color: #b09565;
+  transform: translateY(-2px);
+}
+
+/* Watch Our Story Section */
+.watch-story-section {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.watch-story-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 26, 47, 0.6);
+  z-index: 1;
+}
+
+.watch-story-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+
+.watch-story-title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+}
+
+.watch-story-play-btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+}
+
+.watch-story-play-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.watch-story-play-btn svg {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px; /* Optically center the play icon */
+  color: var(--deep-navy);
+}
+
+/* Video Modal/Lightbox */
+.video-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-modal.active {
+  display: flex;
+}
+
+.video-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  aspect-ratio: 16 / 9;
+}
+
+.video-modal-content video,
+.video-modal-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-modal-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  line-height: 1;
+}
+
+.video-modal-close:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 768px) {
+  .contact-hero-section {
+    padding: 60px 20px;
+  }
+
+  .contact-hero-title {
+    font-size: 3rem;
+  }
+
+  .contact-hero-text {
+    font-size: 1.6rem;
+  }
+
+  .contact-info-title {
+    font-size: 3rem;
+  }
+
+  .contact-info-text {
+    font-size: 1.5rem;
+  }
+
+  .watch-story-section {
+    height: 400px;
+  }
+
+  .watch-story-title {
+    font-size: 3rem;
+  }
+
+  .watch-story-play-btn {
+    width: 70px;
+    height: 70px;
+  }
+
+  .watch-story-play-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .video-modal-content {
+    width: 95%;
+  }
+
+  .video-modal-close {
+    top: -40px;
+    font-size: 32px;
+  }
+}

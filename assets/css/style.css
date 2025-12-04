@@ -2378,6 +2378,7 @@ body.nav-active {
 .breadcrumbs h2 {
   font-size: 56px;
   font-weight: 500;
+  line-height: normal;
   color: var(--cream);
   font-family: var(--fontFamily-playfair);
 }
@@ -2392,6 +2393,7 @@ body.nav-active {
 
 .breadcrumbs ol li + li {
   color: var(--gold);
+  display: inline-flex;
 }
 
 /**

@@ -50,13 +50,14 @@
     <link rel="stylesheet" href="./assets/css/agents.css" />
     <link rel="stylesheet" href="./assets/css/testimonial.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
+    <link rel="stylesheet" href="./assets/css/backtotop.css" />
 
     <!--Preload Images-->
     <link rel="preload" as="image" href="./assets/images/hero-slider-1.jpg" />
     <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg" />
     <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg" />
   </head>
-  <body>
+  <body id="top">
     <!-- Preload -->
     <div class="preload" data-preaload>
       <div class="circle"></div>
@@ -711,6 +712,16 @@
         </div>
       </footer>
     </main>
+
+    <!--BACK TO TOP-->
+    <a
+      href="#top"
+      class="back-top-btn"
+      aria-label="back to top"
+      data-back-top-btn
+    >
+      <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+    </a>
 
     <!--Custom js link-->
     <script src="./assets/js/script.js"></script>

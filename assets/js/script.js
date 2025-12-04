@@ -72,32 +72,26 @@ dropdownItems.forEach((item) => {
   });
 });
 
-/* Header & Back to top Button */
-
+/**
+ * header sticky & go to top
+ */
 const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
 
-let lastScrollPos = 0;
-
-const hideHeader = function () {
-  const isScrollBottom = lastScrollPos < window.scrollY;
-  if (isScrollBottom) {
-    header.classList.add("hide");
-  } else {
-    header.classList.remove("hide");
-  }
-
-  lastScrollPos = window.scrollY;
-};
+if (backTopBtn) {
+  backTopBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
 
 window.addEventListener("scroll", function () {
-  if (window.scrollY >= 50) {
+  if (window.scrollY >= 10) {
     header.classList.add("active");
-    backTopBtn.classList.add("active");
-    hideHeader();
+    if (backTopBtn) backTopBtn.classList.add("active");
   } else {
     header.classList.remove("active");
-    backTopBtn.classList.remove("active");
+    if (backTopBtn) backTopBtn.classList.remove("active");
   }
 });
 

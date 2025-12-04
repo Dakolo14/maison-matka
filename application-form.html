@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/apply.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
+    <link rel="stylesheet" href="./assets/css/backtotop.css" />
 
     <script
       type="module"
@@ -26,7 +27,7 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
   </head>
-  <body>
+  <body id="top">
     <div class="preload" data-preaload>
       <div class="circle"></div>
       <p class="text">Maison Matka</p>
@@ -293,9 +294,19 @@
       </div>
     </footer>
 
+    <!--BACK TO TOP-->
+    <a
+      href="#top"
+      class="back-top-btn"
+      aria-label="back to top"
+      data-back-top-btn
+    >
+      <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+    </a>
+
     <script src="./assets/js/script.js"></script>
     <script>
-      // Same data store for consistency
+      // Get Property ID from URL
       const properties = {
         1: { title: "Modern Downtown Condo" },
         2: { title: "Spacious Family Home" },

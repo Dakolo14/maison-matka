@@ -74,29 +74,20 @@
         Custom CSS Links
         -->
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/agents.css" />
-    <link rel="stylesheet" href="./assets/css/testimonial.css" />
-    <link rel="stylesheet" href="./assets/css/cta.css" />
-    <link rel="stylesheet" href="./assets/css/footer.css" />
     <link rel="stylesheet" href="./assets/css/career.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+    <link rel="stylesheet" href="./assets/css/backtotop.css" />
 
-    <!--
-        Preload Images
-        -->
-    <link rel="Preload" as="image" href="./assets/images/hero-slider-1.jpg" />
-    <link rel="Preload" as="image" href="./assets/images/hero-slider-2.jpg" />
-    <link rel="Preload" as="image" href="./assets/images/hero-slider-3.jpg" />
-
-    <!-- =======================================================
-            * Developer Name: Ajose Damilare
-            * Developer URL: https://ajosedamilare.com/
-            * Updated: Jan 2025
-      ======================================================== -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </head>
-  <body>
-    <!--
-    PRELOADER
-    -->
+  <body id="top">
     <div class="preload" data-preaload>
       <div class="circle"></div>
       <p class="text">Maison Matka</p>
@@ -729,6 +720,16 @@
             </div>
           </div>
         </footer>
+
+        <!--BACK TO TOP-->
+        <a
+          href="#top"
+          class="back-top-btn"
+          aria-label="back to top"
+          data-back-top-btn
+        >
+          <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+        </a>
       </div>
     </main>
 
@@ -788,15 +789,5 @@
         filterJobs();
       });
     </script>
-
-    <!--Ionicon Link-->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>

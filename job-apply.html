@@ -31,11 +31,20 @@
     />
 
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/career.css" />
     <link rel="stylesheet" href="./assets/css/apply.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
+    <link rel="stylesheet" href="./assets/css/backtotop.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </head>
-  <body>
+  <body id="top">
     <div class="preload" data-preaload>
       <div class="circle"></div>
       <p class="text">Maison Matka</p>
@@ -460,30 +469,56 @@
       </div>
     </footer>
 
+    <!--BACK TO TOP-->
+    <a
+      href="#top"
+      class="back-top-btn"
+      aria-label="back to top"
+      data-back-top-btn
+    >
+      <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+    </a>
+
     <script src="./assets/js/script.js"></script>
     <script>
-      // Job Data for Title Display
-      const jobTitles = {
-        "property-manager": "Property Manager",
-        "leasing-consultant": "Leasing Consultant",
-        "marketing-coordinator": "Marketing Coordinator",
-      };
-
-      // Get job ID from URL
+      // Get Job ID from URL
       const urlParams = new URLSearchParams(window.location.search);
       const jobId = urlParams.get("job");
 
-      if (jobId && jobTitles[jobId]) {
-        document.title = `Apply for ${jobTitles[jobId]} | Maison Matka Careers`;
-        document.getElementById("breadcrumb-title").textContent = "Apply";
-        document.getElementById("breadcrumb-job").textContent =
-          jobTitles[jobId];
-        document.getElementById("job-title-display").textContent =
-          jobTitles[jobId];
-        document.getElementById("jobId").value = jobId;
-        document.getElementById(
-          "back-link"
-        ).href = `job-details.html?job=${jobId}`;
+      if (jobId) {
+        // Fetch job details from the server (mocked here as static data)
+        const jobDetails = {
+          "property-manager": {
+            title: "Property Manager",
+            description:
+              "Manage and oversee property operations, ensuring high standards of service and maintenance.",
+          },
+          "leasing-consultant": {
+            title: "Leasing Consultant",
+            description:
+              "Assist clients in finding suitable properties, conduct property viewings, and manage lease agreements.",
+          },
+          "marketing-coordinator": {
+            title: "Marketing Coordinator",
+            description:
+              "Develop and implement marketing strategies to promote properties and attract potential tenants.",
+          },
+        };
+
+        const job = jobDetails[jobId];
+
+        if (job) {
+          document.getElementById("job-title-display").textContent = job.title;
+          document.getElementById("breadcrumb-job").textContent = job.title;
+          document.getElementById("jobId").value = jobId;
+          document.getElementById(
+            "back-link"
+          ).href = `job-details.html?job=${jobId}`;
+        } else {
+          document.getElementById("job-title-display").textContent =
+            "this Position";
+          document.getElementById("back-link").href = "career.html";
+        }
       } else {
         document.getElementById("job-title-display").textContent =
           "this Position";
@@ -505,14 +540,5 @@
           // window.location.href = "career.html";
         });
     </script>
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>
